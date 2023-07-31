@@ -9,38 +9,38 @@ const CardData = [
       {
         id: 1,
         image: "/images/8.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        title: "Euphoria Crop Blouse",
+        price: "Rp. 125.000",
       },
       {
         id: 2,
         image: "/images/9.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        title: "Venus Halter Dress",
+        price: "Rp. 180.000",
       },
       {
         id: 3,
         image: "/images/10.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        title: "Snap Pure Blouse",
+        price: "Rp. 129.000",
       },
       {
         id: 4,
-        image: "/images/8.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        image: "/images/11.png",
+        title: "West Bootscut Denim",
+        price: "Rp. 229.000",
       },
       {
         id: 5,
-        image: "/images/9.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        image: "/images/12.png",
+        title: "Ribbon Check Long",
+        price: "Rp. 175.000",
       },
       {
         id: 6,
-        image: "/images/10.png",
-        title: "Business Insurance",
-        price: "Rs: 200",
+        image: "/images/13.png",
+        title: "Shouldcut Knit",
+        price: "Rp. 149.000",
       },
     ];
 
@@ -64,33 +64,33 @@ const BestSeller = () => {
         </div>
       ),
 
-    // responsive: [
-    //   {
-    //     breakpoint: 1024,
-    //     settings: {
-    //       slidesToShow: 2,
-    //       slidesToScroll: 2,
-    //     },
-    //   },
-    //   {
-    //     breakpoint: 768,
-    //     settings: {
-    //       slidesToShow: 1,
-    //       slidesToScroll: 1,
-    //     },
-    //   },
-    // ],
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="mx-auto max-w-screen-2xl bg-[#fff] ">
-        
+    <div className="mx-auto w-full container bg-[#fff] flex-wrap lg:flex-nowrap">
+        <div className="flex-wrap lg:flex-nowrap">
         <div className="flex justify-center items-center text-5xl font-bold text-[#404040] p-5">
            <h2>Our Best Seller</h2>
         </div>
       <Slider {...settings} >
         {CardData.map((data) => (
-          <div key={data.id} className="p-5 flex-wrap lg:flex-nowrap ">
+          <div key={data.id} className="p-5">
              
             <div className="flex gap-5 justify-center flex-wrap lg:flex-nowrap">
               <div className="flex gap-2 flex-col">
@@ -98,8 +98,8 @@ const BestSeller = () => {
                   className=""
                   src={data.image}
                   alt=""
-                  width={420}
-                  height={420}
+                  width={400}
+                  height={400}
                 />
                 <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
                    <p>{data.title}</p>
@@ -111,6 +111,7 @@ const BestSeller = () => {
           </div>
         ))}
       </Slider>
+      </div>
     </div>
   );
 };

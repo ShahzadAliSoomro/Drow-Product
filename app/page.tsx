@@ -3,6 +3,9 @@ import Navbar from './components/Navbar'
 import HeroSec from './components/HeroSec'
 import SeasonProduct from './components/seasoncollections/SeasonProduct'
 import BestSeller from './components/bestseller/BestSeller'
+import ShopNow from './components/shopnow/ShopNow'
+import MenuProduct from './components/submenu/MenuProduct'
+import FeatureCollection from './components/featureCollection/FeatureCollection'
 
 export default function Home() {
   return (
@@ -11,6 +14,9 @@ export default function Home() {
       <HeroSec />
       <SeasonProduct />
       <BestSeller />
+      <ShopNow />
+      <MenuProduct />
+      <FeatureCollection />
     </main>
 
 
