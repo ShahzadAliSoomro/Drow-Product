@@ -6,6 +6,7 @@ import BestSeller from './components/bestseller/BestSeller'
 import ShopNow from './components/shopnow/ShopNow'
 import MenuProduct from './components/submenu/MenuProduct'
 import FeatureCollection from './components/featureCollection/FeatureCollection'
+import TestiCard from './components/testiproduct/TestiCard'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <ShopNow />
       <MenuProduct />
       <FeatureCollection />
+      <TestiCard />
     </main>
 
 
