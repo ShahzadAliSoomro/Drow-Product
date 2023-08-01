@@ -101,14 +101,14 @@ const TestiCard = () => {
 
   return (
     <div className="mx-auto w-full container bg-[#fff] flex-wrap lg:flex-nowrap">
-      <div className="flex-wrap lg:flex-nowrap">
+      <div className="flex-wrap lg:flex-nowrap ">
         <div className="flex justify-center items-center text-5xl font-bold text-[#404040] p-5">
           <h2>What They Said</h2>
         </div>
         <Slider {...settings}>
           {CardData.map((data) => (
-            <div key={data.id} className="p-5">
-              <div className="flex gap-5 justify-center flex-wrap lg:flex-nowrap">
+            <div key={data.id} className="p-5 lg:bg-[#fff] bg-[#F7F6F0]">
+              <div className="flex gap-5 justify-center p-6 flex-wrap lg:flex-nowrap bg-[#F7F6F0] rounded-lg">
                 <div className="flex gap-2 flex-col">
                   <Image
                     className=""
@@ -119,7 +119,7 @@ const TestiCard = () => {
                   />
                   <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
                     <p>{data.title}</p>
-                    <div className="flex mt-2 gap-1">
+                    <div className="flex gap-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 text-yellow-400"

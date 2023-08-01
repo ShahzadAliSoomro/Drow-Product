@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
-import HeroSec from './components/HeroSec'
-import SeasonProduct from './components/seasoncollections/SeasonProduct'
-import BestSeller from './components/bestseller/BestSeller'
-import ShopNow from './components/shopnow/ShopNow'
-import MenuProduct from './components/submenu/MenuProduct'
-import FeatureCollection from './components/featureCollection/FeatureCollection'
-import TestiCard from './components/testiproduct/TestiCard'
+import HeroSec from './components/Frame1/HeroSec'
+import SeasonProduct from './components/Frame2/SeasonProduct'
+import BestSeller from './components/Frame3/BestSeller'
+import ShopNow from './components/Frame4/ShopNow'
+import MenuProduct from './components/Frame5/MenuProduct'
+import FeatureCollection from './components/Frame6/FeatureCollection'
+import TestiCard from './components/Frame7/TestiCard'
+import ContactForm from './components/Frame8/ContactForm'
+import Footer from './components/Frame9/Footer'
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <MenuProduct />
       <FeatureCollection />
       <TestiCard />
+      <ContactForm />
+      <Footer />
     </main>
 
 
