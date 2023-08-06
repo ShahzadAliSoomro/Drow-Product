@@ -91,7 +91,6 @@ const BestSeller = () => {
       <Slider {...settings} >
         {CardData.map((data) => (
           <div key={data.id} className="p-5">
-             
             <div className="flex gap-5 justify-center flex-wrap lg:flex-nowrap">
               <div className="flex gap-2 flex-col">
                 <Image
@@ -106,7 +105,6 @@ const BestSeller = () => {
                    <p>{data.price}</p>
                  </div>
               </div>
-              
             </div>
           </div>
         ))}
