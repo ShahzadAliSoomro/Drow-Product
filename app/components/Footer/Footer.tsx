@@ -6,14 +6,13 @@ import {AiOutlineYoutube, AiOutlineTrademark} from "react-icons/ai"
 
 export default function Footer() {
   return (
-    <div className=''>
-<div className="w-full container mx-auto bg-grey-lighter p-10 text-[#404040]">
-    <div className="sm:flex mb-4">
+    <div className='w-full bg-[#fff]'>
+<div className="container mx-auto bg-grey-lighter p-10 text-[#404040]">
+    <div className="sm:flex mb-4 ">
   <div className="sm:w-1/4 h-auto flex justify-center items-center">
   <div className="text-[#404040] flex items-center text-2xl font-bold">
             <p>DROWPRO</p>
           </div>
-    
   </div>
   <div className="sm:w-1/4 h-auto sm:mt-0 mt-8">
       <div className="text-blue mb-2 text-lg font-semibold">About Us</div>
@@ -54,7 +53,7 @@ export default function Footer() {
     </div>
 </div>
 <div className='flex justify-end'>
-    <ul className='flex gap-5 text-lg font-semibold'>
+    <ul className='flex gap-5 lg:text-lg text-sm font-semibold'>
         <li>Guide</li>
         <li>Terms & Conditions</li>
         <li>Privacy Policy</li>

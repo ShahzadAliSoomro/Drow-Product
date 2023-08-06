@@ -44,11 +44,11 @@ const CardData = [
 export default function TopProduct() {
   return (
     <div className="mx-auto w-full container space-y-6 lg:px-20 px-0 ">
-      <div className="p-2 justify-center items-center bg-[#F5F5F5]">
-        <div className="grid lg:grid-cols-3 grid-cols-1 ">
+      <div className="lg:p-2 p-5 justify-center items-center bg-[#F5F5F5]">
+        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-7">
           {CardData.map((data) => (
-            <div key={data.id} className="flex gap-5 justify-center">
-              <div className="flex p-5 flex-col">
+            <div key={data.id} className="flex justify-center">
+              <div className="flex lg:p-5 p-0 flex-col">
                 <Image src={data.image} alt="5Image" width={400} height={400} />
                 <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
                   <p>{data.title}</p>

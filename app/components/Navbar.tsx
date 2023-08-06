@@ -7,7 +7,8 @@ import { BiUser } from "react-icons/bi";
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <div className="mx-auto max-w-screen-2xl bg-[#fff]">
+    <div className="w-full bg-[#fff]">
+      <div className="container mx-auto">
       <div className="flex justify-between p-5">
         <button
           onClick={() => setOpen(!open)}
@@ -34,16 +35,16 @@ export default function Navbar() {
         </button>
         <div className="hidden md:block md:w-auto" id="navbar-default">
           <div className=" text-[#404040] flex gap-8 justify-center items-center font-medium text-lg">
-            <Link href="">
+            <Link href="/">
               <p>Home</p>
             </Link>
-            <Link href="">
+            <Link href="/product">
               <p>Product</p>
             </Link>
-            <Link href="">
+            <Link href="/categories">
               <p>Categories</p>
             </Link>
-            <Link href="">
+            <Link href="/sale">
               <p>Sale</p>
             </Link>
           </div>
@@ -98,7 +99,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
-      
+      </div>
     </div>
   );
 }

@@ -31,10 +31,10 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="border-r-4 border-black "></div>
+          <div className="border-r-2 border-black "></div>
 
           <div className="flex flex-col w-full lg:w-6/12 p-5 justify-center ">
-            <div className="w-72 text-center flex flex-col gap-5">
+            <div className="w-full lg:w-10/12 text-center flex flex-col gap-5">
             <div className="bg-[#FFFFFF] text-[#404040]">
               <p>Full Name</p>
             </div>
@@ -53,26 +53,28 @@ export default function ContactForm() {
               <label htmlFor="remember" className="text-xs font-semibold text-gray-500">I agree to all the Terms and Privacy Policy</label>
             </div>
 
-            <div className="flex flex-col justify-center items-center gap-5">
+            <div className=" flex flex-col justify-center items-center gap-5">
             <div className='flex justify-center items-center text-base'>
              <button className='text-[#404040] p-2 bg-[#FFFFFF] rounded-xl'>SIGN UP</button>
              
              </div>
-             <div className="flex gap-1 w-72 text-[#404040] justify-center items-center">
+             <div className="flex gap-1 w-full lg:w-12/12 text-[#404040] justify-center items-center">
              <div className="border-b-2 w-1/2 border-black"></div>
              <p>Or</p>
              <div className="border-b-2 w-1/2 border-black"></div>
              </div>
             </div>
-            <div className='flex bg-[#FFFFFF] rounded-full justify-center items-center text-base'>
+            <div className='flex justify-center text-base '>
+              <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
               <FcGoogle className="w-5 h-5"/>
              <button className='text-[#404040] p-2'>SIGN UP WITH GOOGLE</button>
-             
              </div>
-             <div className='flex bg-[#FFFFFF] rounded-full justify-center items-center text-base'>
+             </div>
+             <div className='flex justify-center text-base '>
+              <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
              <BsFacebook className="w-5 h-5 text-blue-700"/>
              <button className='text-[#404040] p-2  '>SIGN UP WITH FACEBOOK</button>
-             
+             </div>
              </div>
             </div>
             

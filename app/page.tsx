@@ -1,28 +1,31 @@
 import Image from 'next/image'
 import Navbar from './components/Navbar'
-import HeroSec from './components/Frame1/HeroSec'
-import SeasonProduct from './components/Frame2/SeasonProduct'
-import BestSeller from './components/Frame3/BestSeller'
-import ShopNow from './components/Frame4/ShopNow'
-import MenuProduct from './components/Frame5/MenuProduct'
-import FeatureCollection from './components/Frame6/FeatureCollection'
-import TestiCard from './components/Frame7/TestiCard'
-import ContactForm from './components/Frame8/ContactForm'
-import Footer from './components/Frame9/Footer'
+import HeroSec from './components/Hero/HeroSec'
+import SeasonProduct from './components/Collection/SeasonProduct'
+import BestSeller from './components/Seller/BestSeller'
+import ShopNow from './components/DiscountBanner/ShopNow'
+import MenuProduct from './components/Product/MenuProduct'
+import FeatureCollection from './components/FeatureCollection/FeatureCollection'
+import TestiCard from './components/TestiProduct/TestiCard'
+import ContactForm from './components/ContactPage/ContactForm'
+import Footer from './components/Footer/Footer'
 
 export default function Home() {
   return (
-    <main className='bg-[#fff] w-full mx-auto'>
-      <Navbar />
+    <main className='bg-[#fff] w-full mx-auto '>
+      <div className='space-y-10'>
       <HeroSec />
       <SeasonProduct />
       <BestSeller />
-      <ShopNow />
+      <div className=''>
+        <ShopNow />
+      </div>
+      
       <MenuProduct />
       <FeatureCollection />
       <TestiCard />
       <ContactForm />
-      <Footer />
+      </div>
     </main>
 
 
