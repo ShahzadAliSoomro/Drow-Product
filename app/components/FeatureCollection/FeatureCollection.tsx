@@ -89,6 +89,7 @@ export default function FeatureCollection() {
             </div>
           </div>
         </div>
+        
       </div>
     </div>
   );
