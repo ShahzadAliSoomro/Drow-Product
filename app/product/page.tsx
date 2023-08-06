@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { PiArrowBendUpRightLight } from "react-icons/pi";
 
 const SeasonCard = [
   {
@@ -100,8 +101,48 @@ const ProductCard = [
 const CollectionCard = [
   {
     id: 1,
+    row: false,
     image: "/images/23.png",
-    title: "Spring",
+    mantitle: "COLOURFUL KNITWEAR",
+    title: "SERIES",
+    icon: PiArrowBendUpRightLight,
+  },
+  
+  {
+    id: 2,
+    row: false,
+    image: "/images/25.png",
+    mantitle: "PANTS MADE SPECIAL",
+    title: "SERIES",
+    icon: PiArrowBendUpRightLight,
+  },
+
+    {
+    
+    id: 3,
+    row: true,
+    image: "/images/24.png",
+    mantitle: "JIWOO MADE SPECIAL",
+    title: "SERIES",
+    icon: PiArrowBendUpRightLight,
+  },
+  
+  
+  {
+    id: 4,
+    row: false,
+    image: "/images/26.png",
+    mantitle: "FRESHIDER TOP MADE",
+    title: "SERIES",
+    icon: PiArrowBendUpRightLight,
+  },
+  {
+    id: 5,
+    row: false,
+    image: "/images/27.png",
+    mantitle: "FRESHIDER BOTTOM MADE",
+    title: "SERIES",
+    icon: PiArrowBendUpRightLight,
   }
 ]
 
@@ -165,7 +206,49 @@ export default function Page() {
             </div>
           ))}
         </div>
-       
+        <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
+          <h2>Our Featured Collections</h2>
+        </div>
+        <div className="grid grid-flow-row grid-cols-3">
+            {CollectionCard.map((item) => (
+                    <div className={`${item.row ? "row-span-2": ""}`}>
+                <div className="flex flex-col justify-end">
+          <div>
+            <Image src={item.image} alt="" width={400} height={400} />
+          </div>
+          <div className="flex text-[#404040] absolute gap-44 ">
+            <div className="flex flex-col p-2 text-sm font-semibold">
+              <h5>{item.mantitle}</h5>
+              <h5>{item.title}</h5>
+            </div>
+            <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
+              <PiArrowBendUpRightLight className="w-12 h-12" />
+            </div>
+          </div>
+        </div>
+                </div>
+            ))}
+        </div>
+         {/* <div className="lg:w-[1240px] w-full mx-auto flex justify-center relative gap-10 flex-wrap lg:flex-nowrap">
+            {CollectionCard.map((item) => (
+                <div className="flex flex-col gap-5">
+                    <div className="flex flex-col justify-end">
+              <div>
+                <Image src={item.image} alt="" width={400} height={400} />
+              </div>
+              <div className="flex text-[#404040] absolute gap-44 ">
+                <div className="flex flex-col p-2 text-sm font-semibold">
+                  <h5>{item.mantitle}</h5>
+                  <h5>{item.title}</h5>
+                </div>
+                <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
+                  <PiArrowBendUpRightLight className="w-12 h-12" />
+                </div>
+              </div>
+            </div>
+                    </div>
+            ))}
+         </div> */}
       </div>
     </div>
   );
