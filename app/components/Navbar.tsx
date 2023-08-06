@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
             <Link href="/categories">
               <p>Categories</p>
-            </Link>
+            </Link> 
             <Link href="/sale">
               <p>Sale</p>
             </Link>
