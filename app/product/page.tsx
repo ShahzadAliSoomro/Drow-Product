@@ -207,7 +207,7 @@ export default function Page() {
         <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
           <h2>Our Featured Collections</h2>
         </div>
-        <div className="flex justify-center relative gap-10 flex-wrap lg:flex-nowrap">
+        <div className="lg:w-[1240px] w-full mx-auto flex justify-center relative gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col justify-end">
               <div>
@@ -240,8 +240,8 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col justify-end">
-            <div>
-              <Image src="/images/25.png" alt="" width={400} height={400} />
+            <div className="h-full">
+              <Image src="/images/25.png" alt="" width={400} height={400} className="h-full"/>
             </div>
             <div className="flex text-[#404040] absolute gap-44 ">
               <div className="flex flex-col p-2 text-sm font-semibold">
@@ -260,11 +260,11 @@ export default function Page() {
               <div>
                 <Image src="/images/26.png" alt="" width={400} height={400} />
               </div>
-              <div className="flex text-[#404040] absolute gap-44 ">
+              <div className="flex text-[#404040] absolute right-0 gap-44 ">
                 <div className="flex flex-col p-2 text-sm font-semibold">
-                  <h5>FRESHIDER TOP MADE</h5>
+                  <h5>FRESHIDE TOP MADE</h5>
                   <h5>SERIES</h5>
-                </div>
+                </div> 
                 <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
@@ -275,9 +275,9 @@ export default function Page() {
               <div>
                 <Image src="/images/27.png" alt="" width={400} height={400} />
               </div>
-              <div className="flex text-[#404040] absolute gap-44 ">
+              <div className="flex text-[#404040] absolute right-0 gap-44 ">
                 <div className="flex flex-col p-2 text-sm font-semibold">
-                  <h5 className="">SWEETESTS DRESSES</h5>
+                  <h5 className="">SWEETESTS DRES</h5>
                   <h5>SERIES</h5>
                 </div>
                 <div className="bg-[#F7F6F0] lg:w-14 rounded-t-lg"> 
@@ -294,7 +294,7 @@ export default function Page() {
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {TestiCard.map((item) => (
             <div key={item.id} className=" lg:bg-[#fff] ">
-              <div className="flex justify-center p-6 flex-wrap lg:flex-nowrap rounded-lg">
+              <div className="flex justify-center flex-wrap lg:flex-nowrap rounded-lg">
                 <div className="flex gap-2 flex-col">
                   <Image
                     className=""
