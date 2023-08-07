@@ -238,9 +238,9 @@ export default function Page() {
           <h2>Season Collections Female</h2>
         </div>
         
-        <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+        <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5 ">
           {SellerCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -257,7 +257,7 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {ProductCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -277,7 +277,7 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {MaleCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -297,7 +297,7 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {KidzCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"

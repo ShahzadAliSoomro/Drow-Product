@@ -151,9 +151,9 @@ export default function Page() {
         <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
           <h2>Season Collections</h2>
         </div>
-        <div className="lg:w-[1240px] w-full mx-auto flex gap-5 justify-center flex-wrap lg:flex-nowrap">
+        <div className="lg:w-[1240px] w-full mx-auto flex gap-5 justify-center flex-wrap lg:flex-nowrap ">
           {SeasonCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -169,7 +169,7 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {SellerCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -189,7 +189,7 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {ProductCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -209,8 +209,8 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto flex justify-center relative gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/23.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">
@@ -223,8 +223,8 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/24.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">
@@ -239,8 +239,8 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-end">
-            <div className="h-full">
+          <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="h-full ">
               <Image src="/images/25.png" alt="" width={400} height={400} className="h-full"/>
             </div>
             <div className="flex text-[#404040] absolute gap-44 ">
@@ -255,9 +255,9 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end">
-              {/* <div className=' '> */}
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              
+              <div className="">
                 <Image src="/images/26.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute right-0 gap-44 ">
@@ -269,10 +269,10 @@ export default function Page() {
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
-              {/* </div> */}
+              
             </div>
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/27.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute right-0 gap-44 ">
@@ -295,7 +295,7 @@ export default function Page() {
           {TestiCard.map((item) => (
             <div key={item.id} className=" lg:bg-[#fff] ">
               <div className="flex justify-center flex-wrap lg:flex-nowrap rounded-lg">
-                <div className="flex gap-2 flex-col">
+                <div className="flex gap-2 flex-col hover:-translate-y-3 transition-all duration-500">
                   <Image
                     className=""
                     src={item.image}
@@ -351,7 +351,6 @@ export default function Page() {
                     <p className="text-sm text-justify w-96 flex justify-center">
                       {item.text}
                     </p>
-                    {/* <p>{data.price}</p> */}
                   </div>
                 </div>
               </div>

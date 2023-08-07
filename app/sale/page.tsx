@@ -140,10 +140,9 @@ export default function Page() {
         <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
           <h2>Get Upto 50%</h2>
         </div>
-        
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {SellerCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -155,7 +154,6 @@ export default function Page() {
               <p className="text-green-600 font-semibold">{item.discount}</p>
                 <p>{item.title}</p>
                 <p>{item.price}</p>
-                
               </div>
             </div>
           ))}
