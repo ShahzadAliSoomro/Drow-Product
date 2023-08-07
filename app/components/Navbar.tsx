@@ -14,7 +14,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           data-collapse-toggle="navbar-default"
           type="button"
-          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-black hover:bg-[#F7F6F0] focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#F7F6F0] dark:focus:ring-gray-300 md:hidden"
+          className="inline-flex items-center p-2 -ml-3 rounded-lg text-sm text-black hover:bg-[#F7F6F0] focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#F7F6F0] dark:focus:ring-gray-300 md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >

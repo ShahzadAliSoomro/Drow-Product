@@ -100,9 +100,9 @@ const TestiCard = () => {
   };
 
   return (
-    <div className="mx-auto w-full container bg-[#fff]">
+    <div className="mx-auto w-full container bg-[#fff] space-y-2 lg:p-0 p-6">
       
-        <div className="flex justify-center items-center text-5xl font-bold text-[#404040]">
+        <div className="flex justify-center items-center lg:text-5xl text-4xl font-bold text-[#404040]">
           <h2>What They Said</h2>
         </div>
         <div className="lg:w-[1240px] mx-auto ">
@@ -163,7 +163,7 @@ const TestiCard = () => {
                       </svg>
                     </div>
                     <p className="text-sm font-semibold mt-2 text-[#404040]">{data.mantitle}</p>
-                    <p className="text-sm text-justify w-96 text-[#404040] mx-auto pb-5">
+                    <p className="text-sm text-justify lg:w-96 w-full text-[#404040] mx-auto pb-5">
                       {data.text}
                     </p>
                     
