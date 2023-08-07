@@ -16,9 +16,9 @@ export default function Page() {
               design on us!
             </p>
             <p className="flex flex-col items-center justify-center mt-10 text-center">
-              <span>Don't have an account?</span>
-              <Link href="/signup" className="underline cursor-pointer hover:-translate-x-1">
-                Signup Now!
+              <span>I am already a member!</span>
+              <Link href="/login" className="underline cursor-pointer hover:-translate-x-1">
+                Sign In Now!
               </Link>
             </p>
             <p className="mt-6 text-sm text-center text-[#404040]">
@@ -42,6 +42,20 @@ export default function Page() {
                   htmlFor="email"
                   className="text-sm font-semibold text-[#404040]"
                 >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="email"
+                  placeholder="John Doe"
+                  className="px-4 py-2 text-[#404040] bg-[#F7F6F0] transition duration-300 border border-gray-300 rounded  "
+                />
+              </div>
+              <div className="flex flex-col space-y-1">
+                <label
+                  htmlFor="email"
+                  className="text-sm font-semibold text-[#404040]"
+                >
                   Email address
                 </label>
                 <input
@@ -59,12 +73,7 @@ export default function Page() {
                   >
                     Password
                   </label>
-                  <Link
-                    href="#"
-                    className="text-sm text-[#404040] hover:underline focus:text-blue-800"
-                  >
-                    Forgot Password?
-                  </Link>
+                  
                 </div>
                 <input
                   type="password"
@@ -73,32 +82,36 @@ export default function Page() {
                   className="px-4 py-2 bg-[#F7F6F0] text-[#404040] transition duration-300 border border-gray-300 rounded focus:border-transparent"
                 />
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex flex-col space-y-1">
+                <div className="flex items-center justify-between">
+                  <label
+                    htmlFor="password"
+                    className="text-sm font-semibold text-[#404040]"
+                  >
+                   Confrim Password
+                  </label>
+                  
+                </div>
                 <input
-                  type="checkbox"
-                  id="remember"
-                  className="w-4 h-4 transition duration-300 rounded"
+                  type="password"
+                  id="password"
+                  placeholder="Password"
+                  className="px-4 py-2 bg-[#F7F6F0] text-[#404040] transition duration-300 border border-gray-300 rounded focus:border-transparent"
                 />
-                <label
-                  htmlFor="remember"
-                  className="text-sm font-semibold text-[#404040]"
-                >
-                  Remember me
-                </label>
               </div>
               <div>
                 <button
                   type="submit"
                   className="w-full px-4 py-2 text-lg font-semibold hover:text-[#404040] hover:-translate-y-1 transition-all duration-500 text-[#404040] bg-[#F7F6F0] rounded-md shadow hover:bg-[#F7F6F0] focus:outline-none focus:ring-blue-200 focus:ring-4"
                 >
-                  Log in
+                  Sign Up
                 </button>
               </div>
               <div className="flex flex-col space-y-5">
                 <span className="flex items-center justify-center space-x-2">
                   <span className="h-px bg-gray-400 w-36"></span>
                   <span className="font-normal text-[#404040]">
-                    or login with
+                    Or Login with
                   </span>
                   <span className="h-px bg-gray-400 w-36"></span>
                 </span>

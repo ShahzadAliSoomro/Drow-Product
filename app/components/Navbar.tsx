@@ -14,7 +14,7 @@ export default function Navbar() {
           onClick={() => setOpen(!open)}
           data-collapse-toggle="navbar-default"
           type="button"
-          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-black hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-300 dark:focus:ring-gray-300 md:hidden"
+          className="ml-3 inline-flex items-center rounded-lg p-2 text-sm text-black hover:bg-[#F7F6F0] focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-[#F7F6F0] dark:focus:ring-gray-300 md:hidden"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -51,7 +51,9 @@ export default function Navbar() {
           </div>
           <div className="hidden md:block md:w-auto" id="navbar-default">
           <div className="text-[#404040] flex items-center text-2xl font-bold">
+            <Link href="/">
             <p>DROWPRO</p>
+            </Link>
           </div>
           </div>
         <div className="flex gap-5 text-[#404040] justify-center items-center">
@@ -74,26 +76,26 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-
-
         {open && (
             
           <div className="lg:hidden absolute left-0 top-10 p-6 ">
             <div className="flex flex-col gap-2">
               <div className="text-[#404040] flex text-2xl font-bold">
+                <Link href="/">
                 <p>DROWPRO</p>
+                </Link>
               </div>
               <div className=" text-[#404040] flex flex-col font-medium gap-2 text-lg">
-                <Link href="">
+                <Link href="/">
                   <p>Home</p>
                 </Link>
-                <Link href="">
+                <Link href="/product">
                   <p>Product</p>
                 </Link>
-                <Link href="">
+                <Link href="/categories">
                   <p>Categories</p>
                 </Link>
-                <Link href="">
+                <Link href="/sale">
                   <p>Sale</p>
                 </Link>
               </div>
