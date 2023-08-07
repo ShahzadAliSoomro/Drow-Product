@@ -59,7 +59,7 @@ export default function Navbar() {
             <input
               type="text"
               placeholder="Search"
-              className="bg-[#F2F2F2] text-sm p-2 rounded"
+              className="bg-[#F7F6F0] text-sm p-2 rounded"
             />
             <div className="absolute bottom-2 left-44">
               <AiOutlineSearch className="w-5 h-5" />
@@ -69,7 +69,9 @@ export default function Navbar() {
             <AiOutlineLock className="w-6 h-6 " />
           </div>
           <div className="">
+            <Link href="/login">
             <BiUser className="w-6 h-6" />
+            </Link>
           </div>
         </div>
 
