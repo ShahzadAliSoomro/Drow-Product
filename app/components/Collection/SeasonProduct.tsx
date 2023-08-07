@@ -28,7 +28,7 @@ export default function SeasonProduct() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto flex gap-5 justify-center flex-wrap lg:flex-nowrap">
           {SeasonCard.map((item) => (
-            <div className="flex gap-4 flex-col">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"

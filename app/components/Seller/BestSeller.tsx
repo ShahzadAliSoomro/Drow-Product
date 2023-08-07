@@ -200,7 +200,7 @@ const BestSeller = () => {
       {CardData.map((data) => (
             <div key={data.id} className="">
               <div className="flex justify-center items-center">
-                <div className="">
+                <div className="hover:-translate-y-3 transition-all duration-500">
                   <Image
                     className="w-full h-full"
                     src={data.image}
