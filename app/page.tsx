@@ -13,7 +13,9 @@ export default function Home() {
       <div className='space-y-10'>
       <HeroSec />
       <SeasonProduct />
+      <div className=''>
       <BestSeller />
+      </div>
       <div className=''>
         <ShopNow />
       </div>

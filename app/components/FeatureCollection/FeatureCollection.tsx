@@ -9,7 +9,7 @@ export default function FeatureCollection() {
           <h2>Our Featured Collections</h2>
         </div>
 
-        <div className="flex justify-center relative gap-10 flex-wrap lg:flex-nowrap">
+        <div className="flex justify-center relative gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex flex-col gap-5">
             <div className="flex flex-col justify-end">
               <div>
@@ -42,8 +42,8 @@ export default function FeatureCollection() {
           </div>
 
           <div className="flex flex-col justify-end">
-            <div>
-              <Image src="/images/25.png" alt="" width={400} height={400} />
+            <div className="w-full h-full">
+              <Image src="/images/25.png" alt="" width={400} height={400} className="h-full"/>
             </div>
             <div className="flex text-[#404040] absolute gap-44 ">
               <div className="flex flex-col p-2 text-sm font-semibold">

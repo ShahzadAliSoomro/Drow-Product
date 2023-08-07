@@ -43,22 +43,26 @@ const CardData = [
 
 export default function TopProduct() {
   return (
-    <div className="mx-auto w-full container space-y-6 lg:px-20 px-0 ">
-      <div className="lg:p-2 p-5 justify-center items-center bg-[#F5F5F5]">
-        <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-5 gap-7">
-          {CardData.map((data) => (
-            <div key={data.id} className="flex justify-center">
-              <div className="flex lg:p-5 p-0 flex-col">
-                <Image src={data.image} alt="5Image" width={400} height={400} />
-                <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
-                  <p>{data.title}</p>
-                  <p>{data.price}</p>
-                </div>
+    <div className="mx-auto w-full container space-y-6 lg:px-32 px-0">
+      <div className="lg:p-5 p-5 justify-center items-center bg-[#F5F5F5]">
+      <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+          {CardData.map((item) => (
+            <div className="flex gap-4 flex-col">
+              <Image
+                src={item.image}
+                alt="5Image"
+                width={400}
+                height={400}
+                className="h-full"
+              />
+              <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
+                <p>{item.title}</p>
+                <p>{item.price}</p>
               </div>
             </div>
           ))}
         </div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center pt-3">
           <div className="flex justify-center gap-1 items-center text-sm p-3 font-semibold rounded-full bg-[#FFFFFF]">
             <button className="text-[#404040] rounded-xl">SEE MORE</button>
 

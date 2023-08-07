@@ -100,26 +100,27 @@ const TestiCard = () => {
   };
 
   return (
-    <div className="mx-auto w-full container bg-[#fff] flex-wrap lg:flex-nowrap">
-      <div className="flex-wrap lg:flex-nowrap ">
-        <div className="flex justify-center items-center text-5xl font-bold text-[#404040] p-5">
+    <div className="mx-auto w-full container bg-[#fff]">
+      
+        <div className="flex justify-center items-center text-5xl font-bold text-[#404040]">
           <h2>What They Said</h2>
         </div>
+        <div className="lg:w-[1240px] mx-auto">
         <Slider {...settings}>
           {CardData.map((data) => (
-            <div key={data.id} className="p-5 lg:bg-[#fff] bg-[#F7F6F0]">
-              <div className="flex gap-5 justify-center p-6 flex-wrap lg:flex-nowrap bg-[#F7F6F0] rounded-lg">
-                <div className="flex gap-2 flex-col">
+            <div key={data.id} className="p-2">
+              <div className="flex justify-center">
+                <div className="bg-[#F7F6F0] p-2 rounded-lg shadow-md">
                   <Image
-                    className=""
+                    className="mx-auto"
                     src={data.image}
                     alt=""
-                    width={400}
-                    height={400}
+                    width={500}
+                    height={500}
                   />
-                  <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
-                    <p>{data.title}</p>
-                    <div className="flex gap-1">
+                  <div className="text-center mt-2">
+                    <p className="text-lg text-[#404040] font-semibold">{data.title}</p>
+                    <div className="flex justify-center gap-1">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 text-yellow-400"
@@ -161,18 +162,18 @@ const TestiCard = () => {
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     </div>
-                    <p>{data.mantitle}</p>
-                    <p className="text-sm text-justify w-96 flex justify-center">
+                    <p className="text-sm font-semibold mt-2 text-[#404040]">{data.mantitle}</p>
+                    <p className="text-sm text-justify w-96 text-[#404040] mx-auto pb-5">
                       {data.text}
                     </p>
-                    {/* <p>{data.price}</p> */}
+                    
                   </div>
                 </div>
               </div>
             </div>
           ))}
         </Slider>
-      </div>
+        </div>
     </div>
   );
 };
