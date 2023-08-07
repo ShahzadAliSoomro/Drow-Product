@@ -233,8 +233,8 @@ const MaleCard = [
 export default function Page() {
   return (
     <div className="w-full bg-[#fff] pt-10">
-      <div className="container mx-auto space-y-10">
-        <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
+      <div className="container mx-auto space-y-10 lg:p-0 p-3">
+        <div className="flex justify-center items-center lg:text-5xl text-2xl font-bold text-[#404040]">
           <h2>Season Collections Female</h2>
         </div>
         
