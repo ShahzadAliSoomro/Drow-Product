@@ -65,7 +65,6 @@ export default function TopProduct() {
         <div className="flex justify-center items-center pt-3">
           <div className="flex justify-center gap-1 items-center text-sm p-3 font-semibold rounded-full hover:-translate-x-2 transition-all duration-500 bg-[#FFFFFF]">
             <button className="text-[#404040] rounded-xl">SEE MORE</button>
-
             <BsArrowRight className="w-5 h-5 text-[#404040]" />
           </div>
         </div>

@@ -67,10 +67,10 @@ export default function Navbar() {
               <AiOutlineSearch className="w-5 h-5" />
             </div>
           </div>
-          <div className="">
+          <div className="hover:-translate-x-1 transition-all duration-500">
             <AiOutlineLock className="w-6 h-6 " />
           </div>
-          <div className="">
+          <div className="hover:-translate-x-1 transition-all duration-500">
             <Link href="/login">
             <BiUser className="w-6 h-6" />
             </Link>
