@@ -11,8 +11,8 @@ export default function FeatureCollection() {
 
         <div className="flex justify-center relative gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/23.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">
@@ -25,8 +25,8 @@ export default function FeatureCollection() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/24.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">
@@ -41,8 +41,8 @@ export default function FeatureCollection() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-end">
-            <div className="w-full h-full">
+          <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="w-full h-full ">
               <Image src="/images/25.png" alt="" width={400} height={400} className="h-full"/>
             </div>
             <div className="flex text-[#404040] absolute gap-44 ">
@@ -57,9 +57,9 @@ export default function FeatureCollection() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end">
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
               {/* <div className=' '> */}
-              <div>
+              <div className="">
                 <Image src="/images/26.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">
@@ -73,8 +73,8 @@ export default function FeatureCollection() {
               </div>
               {/* </div> */}
             </div>
-            <div className="flex flex-col justify-end">
-              <div>
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+              <div className="">
                 <Image src="/images/27.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute gap-44 ">

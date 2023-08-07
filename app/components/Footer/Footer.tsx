@@ -36,16 +36,16 @@ export default function Footer() {
     <div className="sm:w-1/2 sm:mt-0 mt-8 h-auto">
     <div className="text-blue mb-2 text-lg font-semibold">Follow Us</div>
     <div className='flex gap-2'>
-       <div className='bg-[#F5F5F5] p-2 rounded-full'>
+       <div className='bg-[#F5F5F5] p-2 rounded-full hover:-translate-y-2 transition-all duration-500'>
        <BsFacebook className="w-6 h-6 text-blue-700"/>
        </div>
-       <div className='bg-[#F5F5F5] p-2 rounded-full'>
+       <div className='bg-[#F5F5F5] p-2 rounded-full hover:-translate-y-2 transition-all duration-500'>
        <SlSocialInstagram className="w-6 h-6 text-orange-400"/>
        </div>
-       <div className='bg-[#F5F5F5] p-2 rounded-full'>
+       <div className='bg-[#F5F5F5] p-2 rounded-full hover:-translate-y-2 transition-all duration-500'>
        <CiTwitter className="w-6 h-6 text-blue-500"/>
        </div>
-       <div className='bg-[#F5F5F5] p-2 rounded-full'>
+       <div className='bg-[#F5F5F5] p-2 rounded-full hover:-translate-y-2 transition-all duration-500'>
        <AiOutlineYoutube className="w-6 h-6 text-red-600"/>
        </div>
     </div>

@@ -5,10 +5,10 @@ export default function ShopNow() {
   return (
     <div className='mx-auto w-full bg-[#F5F5F5]'>
         <div className='flex gap-16 p-16 justify-center items-center flex-wrap lg:flex-nowrap'> 
-            <div>
+            <div className='hover:-translate-y-3 transition-all duration-500'>
                 <Image src='/images/14.png' alt='' width={280} height={280}/>
             </div>
-            <div>
+            <div className='hover:-translate-y-3 transition-all duration-500'>
                 <Image src='/images/15.png' alt='' width={220} height={220}/>
             </div>
             <div className='flex flex-col gap-3 justify-center items-center'>
@@ -22,7 +22,7 @@ export default function ShopNow() {
              <button className='text-[#404040] p-2 bg-[#FFFFFF] rounded-xl'>SHOP NOW</button>
              </div>
             </div>
-            <div>
+            <div className='hover:-translate-y-3 transition-all duration-500'>
                 <Image src='/images/16.png' alt='' width={450} height={450}/>
             </div>
             
