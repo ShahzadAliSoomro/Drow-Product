@@ -105,12 +105,12 @@ const TestiCard = () => {
         <div className="flex justify-center items-center text-5xl font-bold text-[#404040]">
           <h2>What They Said</h2>
         </div>
-        <div className="lg:w-[1240px] mx-auto">
+        <div className="lg:w-[1240px] mx-auto ">
         <Slider {...settings}>
           {CardData.map((data) => (
             <div key={data.id} className="p-2">
               <div className="flex justify-center">
-                <div className="bg-[#F7F6F0] p-2 rounded-lg shadow-md">
+                <div className="bg-[#F7F6F0] p-2 rounded-lg shadow-md hover:-translate-y-3 transition-all duration-500">
                   <Image
                     className="mx-auto"
                     src={data.image}
