@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 export default function Page() {
@@ -139,9 +140,11 @@ export default function Page() {
             </label>
           </div>
           <div className="p-3">
+            <Link href="/thanks">
           <button className="block w-full hover:text-[#404040] hover:-translate-y-1 transition-all duration-500 text-[#404040] bg-[#F7F6F0] rounded-md shadow py-2 font-semibold">
             <i className="mdi mdi-lock-outline "></i> PAY NOW
           </button>
+          </Link>
         </div>
         </div>
         
