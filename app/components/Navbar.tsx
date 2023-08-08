@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineLock, AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
+import { BsCart2 } from "react-icons/bs";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -68,7 +69,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hover:-translate-x-1 transition-all duration-500">
-            <AiOutlineLock className="w-6 h-6 " />
+            <Link href="/checkout">
+            <BsCart2 className="w-6 h-6 "/>
+            </Link>
           </div>
           <div className="hover:-translate-x-1 transition-all duration-500">
             <Link href="/login">
