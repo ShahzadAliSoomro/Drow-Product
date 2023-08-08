@@ -15,7 +15,6 @@ export default function Page() {
           <div className="w-full">
             <div className="-mx-3 md:flex items-start">
               <div className="w-full px-5 lg:w-8/12">
-
                 <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                   <div className="w-full flex items-center">
                     <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
@@ -112,17 +111,12 @@ export default function Page() {
                     </div>
                   </div>
                 </div>
-
-                
-               
-                   
-                
               </div>
-              
-                 <div className="w-full px-5 lg:w-4/12 space-y-12 border-l-2 border-gray-300">
-              <div className="pb-10 border-b border-gray-200">
+
+              <div className="w-full px-5 lg:w-4/12 space-y-12 border-l-2 border-gray-300">
+                <div className="pb-10 border-b border-gray-200">
                   <div className="-mx-2 flex items-end justify-end">
-                    <div className="flex-grow px-2 lg:max-w-xs">
+                    <div className="flex-grow px-2">
                       <label className="text-gray-600 font-semibold text-sm mb-2 ml-1">
                         Discount code
                       </label>
@@ -168,25 +162,22 @@ export default function Page() {
                       <span className="font-semibold text-gray-400 text-sm">
                         AUD
                       </span>{" "}
-                      <span className="font-semibold text-[#404040]">$810.00</span>
+                      <span className="font-semibold text-[#404040]">
+                        $810.00
+                      </span>
                     </div>
                   </div>
-                
                 </div>
                 <Link href="/payorder">
-                      <button className="text-center w-full hover:text-[#404040] hover:-translate-y-1 transition-all duration-500 text-[#404040] bg-[#F7F6F0] rounded-md shadow px-3 py-2 font-semibold">
-                        <i className="mdi mdi-lock-outline mr-1"></i>PLACE ORDER
-                      </button>
-                    </Link>
-                    </div>
+                  <button className="text-center w-full hover:text-[#404040] hover:-translate-y-1 transition-all duration-500 text-[#404040] bg-[#F7F6F0] rounded-md shadow px-3 py-2 font-semibold">
+                    <i className="mdi mdi-lock-outline mr-1"></i>PLACE ORDER
+                  </button>
+                </Link>
+              </div>
             </div>
-            
           </div>
         </div>
-        
       </div>
-
-      
     </div>
   );
 }

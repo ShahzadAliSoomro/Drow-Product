@@ -3,7 +3,7 @@ import React from "react";
 export default function Page() {
   return (
     <div className="w-full  bg-[#F7F6F0]">
-      <div className="mx-auto py-10 w-full lg:w-10/12">
+      <div className="mx-auto py-10 w-full lg:w-8/12">
         <div className="w-full mx-auto rounded-lg bg-white border border-gray-200 p-3 text-gray-800 font-light mb-1">
           <div className="w-full flex mb-3 items-center">
             <div className="w-32">
