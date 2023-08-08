@@ -1,17 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Landing Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #ffffff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .content {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  .product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+</style>
 </head>
 <body>
-    <center>
-        <img src="green.jpg" alt="Tick mark green" width="200px" height="200px">
-        <h1 style="color: brown;">DrowPro</h1>
-       <h1 style="color: green;">Thank You !</h1>
-       <h3 style="color: blueviolet;">Your Order has been successfullly submit</h3>
-       <!-- <h3><a style="color: blueviolet;" href="./register.html">Go Back</a></h3> -->
-   </center> 
+<div class="container">
+  <div class="header">
+    <h1>Welcome to Our Email Landing Page</h1>
+  </div>
+  <div class="content">
+    <p>Introducing our featured product:</p>
+    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Product Image" class="product-image">
+    <p>This amazing product will revolutionize your life. Don't miss out!</p>
+    <p>Click the button below to order now:</p>
+    <a href="https://www.example.com/order" class="cta-button">Order Now</a>
+  </div>
+</div>
 </body>
 </html>
