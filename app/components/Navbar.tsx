@@ -39,15 +39,24 @@ export default function Navbar() {
             <Link href="/">
               <p>Home</p>
             </Link>
+      
+      {/* ************************* product Start ************************* */}
             <Link href="/product">
               <p>Product</p>
             </Link>
+            {/* ************************** product End ************************** */}
+
+      {/* ************************* categories Start ************************* */}
             <Link href="/categories">
               <p>Categories</p>
             </Link> 
+            {/* ************************** categories End ************************** */}
+
+      {/* ************************* sale Start ************************* */}
             <Link href="/sale">
               <p>Sale</p>
             </Link>
+            {/* ************************** sale End ************************** */}
           </div>
           </div>
           <div className="hidden md:block md:w-auto" id="navbar-default">

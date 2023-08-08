@@ -11,19 +11,39 @@ export default function Home() {
   return (
     <main className='bg-[#fff] w-full mx-auto '>
       <div className='space-y-10'>
+
+      {/* ************************* Hero Component Start ************************* */}
       <HeroSec />
-      <SeasonProduct />
-      <div className=''>
-      <BestSeller />
-      </div>
-      <div className=''>
-        <ShopNow />
-      </div>
+      {/* ************************** Hero Component End ************************** */}
       
+      {/* ************************* SeasonPruduct Component Start ************************* */}
+      <SeasonProduct />
+      {/* ************************** SeasonPruduct Component End ************************** */}
+
+      {/* ************************* BestSeller Component Start ************************* */}
+      <BestSeller />
+      {/* ************************** BestSeller Component End ************************** */}
+
+      {/* ************************* ShopNow Discount Component Start ************************* */}
+        <ShopNow />
+      {/* ************************** ShopNow Discount Component End ************************** */}
+
+      {/* ************************* Product ==> MenuProduct Component Start ************************* */}
       <MenuProduct />
+      {/* ************************** Product ==> MenuProduct Component End ************************** */}
+
+      {/* ************************* FeatureCollection Component Start ************************* */}
       <FeatureCollection />
+      {/* ************************** FeatureCollection Component End ************************** */}
+
+      {/* ************************* TestiProduct ==> TestiCard Component Start ************************* */}
       <TestiCard />
+      {/* ************************** TestiProduct ==> TestiCard Component End ************************** */}
+
+      {/* ************************* ContactPage ==> ContactForm Component Start ************************* */}
       <ContactForm />
+      {/* ************************** ContactPage ==> ContactForm Component End ************************** */}
+
       </div>
     </main>
     
