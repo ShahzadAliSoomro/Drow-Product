@@ -190,7 +190,7 @@ const BestSeller = () => {
   };
 
   return (
-    <div className="mx-auto w-full bg-[#fff] space-y-5 lg:p-0 p-6">
+    <div className="mx-auto w-full container bg-[#fff] space-y-5 lg:p-0 p-6">
         
         <div className="text-center text-5xl font-bold text-[#404040]">
            <h2 className="">Our Best Seller</h2>
@@ -200,9 +200,9 @@ const BestSeller = () => {
       {CardData.map((data) => (
             <div key={data.id} className="">
               <div className="flex justify-center items-center">
-                <div className="hover:-translate-y-3 transition-all duration-500">
+                <div className=" hover:-translate-y-3 transition-all duration-500">
                   <Image
-                    className="w-full h-full"
+                    className="mx-auto"
                     src={data.image}
                     alt=""
                     width={400} // Adjust this value as needed

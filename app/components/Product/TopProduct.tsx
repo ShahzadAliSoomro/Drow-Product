@@ -43,7 +43,7 @@ const CardData = [
 
 export default function TopProduct() {
   return (
-    <div className="mx-auto w-full container lg:px-32 px-0">
+    <div className="mx-auto w-full container ">
       <div className="lg:p-5 p-5 justify-center items-center bg-[#F5F5F5]">
       <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {CardData.map((item) => (

@@ -5,15 +5,19 @@ import {  AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
 
-export default function Navbar() {
+interface NavbarProps {
+  activeRoute: string;
+}
+export default function Navbar({ activeRoute }: NavbarProps) {
   const [open, setOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(""); // Track the active link
 
-  // useEffect(() => {
-  //   const handler = () => {
-  //     setOpen(false);
-  //   };
-  //   document.addEventListener("mousedown", handler);
-  // })
+  const handleLinkClick = (route: string) => {
+    setActiveLink(route); // Update the active link when a link is clicked
+    setOpen(false);
+  };
+
+  
   
   return (
     <div className="w-full bg-[#fff]">
@@ -45,24 +49,44 @@ export default function Navbar() {
           <div className="hidden md:block md:w-auto" id="navbar-default">
             <div className=" text-[#404040] flex gap-8 justify-center items-center font-medium text-lg">
               <Link href="/">
-                <p>Home</p>
+              <p
+                onClick={() => handleLinkClick("/")}
+                className={`${activeLink === "/" ? "border-b-2 border-blue-500" : ""}`}
+              >
+                Home
+              </p>
               </Link>
 
               {/* ************************* product Start ************************* */}
               <Link href="/product">
-                <p>Product</p>
+              <p
+                onClick={() => handleLinkClick("/product")}
+                className={`${activeLink === "/product" ? "border-b-2 border-blue-500" : ""}`}
+              >
+                Product
+              </p>
               </Link>
               {/* ************************** product End ************************** */}
 
               {/* ************************* categories Start ************************* */}
               <Link href="/categories">
-                <p>Categories</p>
+              <p
+                onClick={() => handleLinkClick("/categories")}
+                className={`${activeLink === "/categories" ? "border-b-2 border-blue-500" : ""}`}
+              >
+                Categories
+              </p>
               </Link>
               {/* ************************** categories End ************************** */}
 
               {/* ************************* sale Start ************************* */}
               <Link href="/sale">
-                <p>Sale</p>
+              <p
+                onClick={() => handleLinkClick("/sale")}
+                className={`${activeLink === "/sale" ? "border-b-2 border-blue-500" : ""}`}
+              >
+                Sale
+              </p>
               </Link>
               {/* ************************** sale End ************************** */}
             </div>
@@ -87,12 +111,27 @@ export default function Navbar() {
             </div>
             <div className="hover:-translate-x-1 transition-all duration-500">
               <Link href="/checkout">
-                <BsCart2 className="w-6 h-6"/>
+              <div
+                onClick={() => handleLinkClick("/checkout")}
+                className={`${
+                  activeLink === "/checkout" ? "border-b-2 border-blue-500" : ""
+                }`}
+              >
+                <BsCart2 className="w-6 h-6" />
+              </div>
               </Link>
             </div>
             <div className="hover:-translate-x-1 transition-all duration-500">
               <Link href="/login">
+              <div
+                onClick={() => handleLinkClick("/login")}
+                className={`${
+                  activeLink === "/login" ? "border-b-2 border-blue-500" : ""
+                }`}
+              >
                 <BiUser className="w-6 h-6" />
+              </div>
+                
               </Link>
             </div>
           </div>
@@ -101,21 +140,21 @@ export default function Navbar() {
               <div className="flex flex-col gap-2">
                 <div className="text-[#404040] flex text-2xl font-bold">
                   <Link href="/">
-                    <p>DROWPRO</p>
+                    <p onClick={() => handleLinkClick("/")} className={`${activeLink === "/" ? "border-b-2 border-blue-500" : ""}`}>DROWPRO</p>
                   </Link>
                 </div>
-                <div className=" text-[#404040] flex flex-col font-medium gap-2 text-lg">
+                <div className="text-[#404040] flex flex-col font-medium gap-2 text-lg">
                   <Link href="/">
-                    <p>Home</p>
+                    <p onClick={() => handleLinkClick("/")} className={`${activeLink === "/" ? "border-b-2 border-blue-500" : ""}`}>Home</p>
                   </Link>
                   <Link href="/product">
-                    <p>Product</p>
+                    <p onClick={() => handleLinkClick("/product")} className={`${activeLink === "/product" ? "border-b-2 border-blue-500" : ""}`}>Product</p>
                   </Link>
                   <Link href="/categories">
-                    <p>Categories</p>
+                    <p onClick={() => handleLinkClick("/categories")} className={`${activeLink === "/categories" ? "border-b-2 border-blue-500" : ""}`}>Categories</p>
                   </Link>
                   <Link href="/sale">
-                    <p>Sale</p>
+                    <p onClick={() => handleLinkClick("/sale")} className={`${activeLink === "/sale" ? "border-b-2 border-blue-500" : ""}`}>Sale</p>
                   </Link>
                 </div>
               </div>
