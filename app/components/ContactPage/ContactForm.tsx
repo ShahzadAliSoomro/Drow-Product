@@ -48,14 +48,14 @@ export default function ContactForm() {
               <input
                 type="checkbox"
                 id="remember"
-                className="w-4 h-4 transition duration-300 rounded focus:ring-2 focus:ring-offset-0 focus:ring-blue-200"
+                className="w-4 h-4 rounded bg-[#FFFFFF]"
               />
               <label htmlFor="remember" className="text-xs font-semibold text-gray-500">I agree to all the Terms and Privacy Policy</label>
             </div>
 
-            <div className=" flex flex-col justify-center items-center gap-5">
+            <div className=" flex flex-col justify-center items-center gap-5 ">
             <div className='flex justify-center items-center text-base'>
-             <button className='text-[#404040] p-2 bg-[#FFFFFF] rounded-xl'>SIGN UP</button>
+             <button className='text-[#404040] p-2 bg-[#FFFFFF] rounded-xl hover:-translate-y-1 transition-all duration-500'>SIGN UP</button>
              
              </div>
              <div className="flex gap-1 w-full lg:w-12/12 text-[#404040] justify-center items-center">
@@ -64,13 +64,13 @@ export default function ContactForm() {
              <div className="border-b-2 w-1/2 border-black"></div>
              </div>
             </div>
-            <div className='flex justify-center text-base '>
+            <div className='flex justify-center text-base hover:-translate-y-1 transition-all duration-500'>
               <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
               <FcGoogle className="w-5 h-5"/>
              <button className='text-[#404040] p-2'>SIGN UP WITH GOOGLE</button>
              </div>
              </div>
-             <div className='flex justify-center text-base '>
+             <div className='flex justify-center text-base hover:-translate-y-1 transition-all duration-500'>
               <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
              <BsFacebook className="w-5 h-5 text-blue-700"/>
              <button className='text-[#404040] p-2  '>SIGN UP WITH FACEBOOK</button>
