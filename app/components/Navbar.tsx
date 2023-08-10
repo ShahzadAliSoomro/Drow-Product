@@ -18,7 +18,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
   };
 
   return (
-    <div className="w-full bg-[#fff]">
+    <div className="w-full bg-[#fff] ">
       <div className="container mx-auto">
         <div className="flex justify-between p-5">
           <button
@@ -119,7 +119,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 <AiOutlineSearch className="w-5 h-5" />
               </div>
             </div>
-            <div className="hover:-translate-x-1 transition-all duration-500">
+            <div className="relative hover:-translate-x-1 transition-all duration-500">
               <Link href="/checkout">
                 <div
                   onClick={() => handleLinkClick("/checkout")}
@@ -130,6 +130,11 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                   }`}
                 >
                   <BsCart2 className="w-6 h-6" />
+                  {/* Display the cart count as a badge */}
+
+                  <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center">
+                    0
+                  </span>
                 </div>
               </Link>
             </div>
