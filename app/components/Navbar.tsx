@@ -115,7 +115,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 placeholder="Search"
                 className="bg-[#F7F6F0] text-sm p-2 rounded"
               />
-              <div className="absolute bottom-2 left-44">
+              <div className="absolute bottom-2 left-[185px]">
                 <AiOutlineSearch className="w-5 h-5" />
               </div>
             </div>
