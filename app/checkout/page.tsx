@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Page() {
   return (
@@ -18,23 +19,20 @@ export default function Page() {
                 <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                   <div className="w-full flex items-center">
                     <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
-                      <img
-                        src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-                        alt=""
-                      />
+                    <Image src="/images/8.png" alt="8" width={160} height={160} className="" />
                     </div>
                     <div className="flex-grow pl-3">
                       <h6 className="font-semibold uppercase text-[#404040]">
-                        Ray Ban Sunglasses.
+                        Euphoria Crop Blouse
                       </h6>
                       <p className="text-gray-400">x 1</p>
                     </div>
                     <div>
                       <span className="font-semibold text-[#404040] text-xl">
-                        $210
+                        Rp. 125.000
                       </span>
                       <span className="font-semibold text-[#404040] text-sm">
-                        .00
+                        
                       </span>
                     </div>
                   </div>
@@ -42,10 +40,7 @@ export default function Page() {
                 <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                   <div className="w-full flex items-center">
                     <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
-                      <img
-                        src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-                        alt=""
-                      />
+                    <Image src="/images/9.png" alt="8" width={160} height={160} className="" />
                     </div>
                     <div className="flex-grow pl-3">
                       <h6 className="font-semibold uppercase text-[#404040]">

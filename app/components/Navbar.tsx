@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { BsCart2 } from "react-icons/bs";
+import Image from "next/image";
 
 interface NavbarProps {
   activeRoute: string;
@@ -11,6 +12,7 @@ interface NavbarProps {
 export default function Navbar({ activeRoute }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleLinkClick = (route: string) => {
     setActiveLink(route); // Update the active link when a link is clicked
@@ -119,7 +121,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 <AiOutlineSearch className="w-5 h-5" />
               </div>
             </div>
-            <div className="relative hover:-translate-x-1 transition-all duration-500">
+            <div className="relative group transition-all duration-500">
               <Link href="/checkout">
                 <div
                   onClick={() => handleLinkClick("/checkout")}
@@ -131,13 +133,94 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 >
                   <BsCart2 className="w-6 h-6" />
                   {/* Display the cart count as a badge */}
-
                   <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center">
-                    0
+                    3
                   </span>
                 </div>
               </Link>
+              {/* Table to show when hovered */}
+              <div className="absolute top-full left-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-64">
+                <div className="flex flex-col gap-5">
+                  <div className=" ">
+                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p>
+                    <div className="flex pt-2 gap-3">
+                      <div >
+                        <Image src="/images/8.png" alt="8" width={160} height={160} className="" />
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-base font-semibold">Euphoria Crop Blouse</p>
+                        <p className="text-base font-bold">Rp. 125.000</p>
+                        <div className="flex gap-2">
+                          <p>Qty: </p>
+                          <button className="text-lg border w-10 text-center">1</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" ">
+                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 180.000</span> </p>
+                    <div className="flex pt-2 gap-3">
+                      <div >
+                        <Image src="/images/9.png" alt="8" width={160} height={160} className="" />
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-base font-semibold">Venus Halter Dress</p>
+                        <p className="text-base font-bold">Rp. 180.000</p>
+                        <div className="flex gap-2">
+                          <p>Qty: </p>
+                          <button className="text-lg border w-10 text-center">1</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=" ">
+                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 229.000</span> </p>
+                    <div className="flex pt-2 gap-3">
+                      <div >
+                        <Image src="/images/11.png" alt="8" width={160} height={160} className="" />
+                      </div>
+                      <div className="flex flex-col gap-3">
+                        <p className="text-base font-semibold">West Bootscut Denim</p>
+                        <p className="text-base font-bold">Rp. 229.000</p>
+                        <div className="flex gap-2">
+                          <p>Qty: </p>
+                          <button className="text-lg border w-10 text-center">1</button>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex justify-center hover:w-full">
+                  <Link href="/checkout" className="flex">
+                    <p className="text-blue-300 hover:underline hover:cursor-pointer hover:shadow hover:w-40 hover:text-center">View All Product</p>
+                  </Link>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            {/* <div className="relative hover:-translate-x-1 transition-all duration-500">
+              <Link href="/checkout">
+                <div
+                  onClick={() => handleLinkClick("/checkout")}
+                  className={`${
+                    activeLink === "/checkout"
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`}
+                >
+                  <BsCart2 className="w-6 h-6" />
+                  
+
+                  <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center">
+                    3
+                  </span>
+                </div>
+              </Link>
+            </div> */}
+
             <div className="hover:-translate-x-1 transition-all duration-500">
               <Link href="/login">
                 <div
