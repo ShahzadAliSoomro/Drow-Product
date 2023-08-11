@@ -7,7 +7,7 @@ import { SlSocialInstagram } from "react-icons/sl";
 
 export default function Page() {
   return (
-    <div className="w-full mx-auto bg-[#F7F6F0] p-5">
+    <div className="w-full mx-auto bg-[#F7F6F0] lg:p-5 p-3">
       <div className="w-full lg:w-6/12 mx-auto bg-white lg:p-20 p-5">
         <div className="flex flex-col items-center space-y-10 justify-center">
           <div className="text-[#404040] text-6xl">

@@ -12,7 +12,7 @@ interface NavbarProps {
 export default function Navbar({ activeRoute }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
-  const [isHovered, setIsHovered] = useState(false);
+  
 
   const handleLinkClick = (route: string) => {
     setActiveLink(route); // Update the active link when a link is clicked
@@ -139,7 +139,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 </div>
               </Link>
               {/* Table to show when hovered */}
-              <div className="absolute animate-pulse top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80">
+              <div className="absolute animate-pulse hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80">
                 <div className="flex flex-col gap-5">
                   <div className=" ">
                     {/* <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p> */}
