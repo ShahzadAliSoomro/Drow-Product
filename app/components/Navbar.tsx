@@ -139,7 +139,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 </div>
               </Link>
               {/* Table to show when hovered */}
-              <div className="absolute top-full left-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-64">
+              <div className="absolute top-full right-0 bg-[#fff] text-[#404040] p-4 rounded hidden border shadow group-hover:block w-64">
                 <div className="flex flex-col gap-5">
                   <div className=" ">
                     <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p>

@@ -44,16 +44,16 @@ export default function Page() {
                     </div>
                     <div className="flex-grow pl-3">
                       <h6 className="font-semibold uppercase text-[#404040]">
-                        Ray Ban Sunglasses.
+                        Venus Halter Dress
                       </h6>
                       <p className="text-gray-400">x 1</p>
                     </div>
                     <div>
                       <span className="font-semibold text-[#404040] text-xl">
-                        $200
+                        Rp. 180.000
                       </span>
                       <span className="font-semibold text-[#404040] text-sm">
-                        .00
+                        
                       </span>
                     </div>
                   </div>
@@ -61,6 +61,27 @@ export default function Page() {
                 <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
                   <div className="w-full flex items-center">
                     <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
+                    <Image src="/images/11.png" alt="8" width={160} height={160} className="" />
+                    </div>
+                    <div className="flex-grow pl-3">
+                      <h6 className="font-semibold uppercase text-[#404040]">
+                        West Bootscut Denim
+                      </h6>
+                      <p className="text-gray-400">x 1</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-[#404040] text-xl">
+                        Rp. 229.000
+                      </span>
+                      <span className="font-semibold text-[#404040] text-sm">
+                        
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
+                  <div className="w-full flex items-center justify-end">
+                    {/* <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
                       <img
                         src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
                         alt=""
@@ -71,37 +92,13 @@ export default function Page() {
                         Ray Ban Sunglasses.
                       </h6>
                       <p className="text-gray-400">x 1</p>
-                    </div>
+                    </div> */}
                     <div>
                       <span className="font-semibold text-[#404040] text-xl">
-                        $200
+                        Sub Total : Rp. 534.000
                       </span>
                       <span className="font-semibold text-[#404040] text-sm">
-                        .00
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full text-gray-800 font-light mb-6 border-b border-gray-200 pb-6">
-                  <div className="w-full flex items-center">
-                    <div className="overflow-hidden rounded-lg w-16 h-16 bg-gray-50 border border-gray-200">
-                      <img
-                        src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1160&q=80"
-                        alt=""
-                      />
-                    </div>
-                    <div className="flex-grow pl-3">
-                      <h6 className="font-semibold uppercase text-[#404040]">
-                        Ray Ban Sunglasses.
-                      </h6>
-                      <p className="text-gray-400">x 1</p>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-[#404040] text-xl">
-                        $200
-                      </span>
-                      <span className="font-semibold text-[#404040] text-sm">
-                        .00
+                        
                       </span>
                     </div>
                   </div>
@@ -136,7 +133,7 @@ export default function Page() {
                       <span className="text-gray-600">Subtotal</span>
                     </div>
                     <div className="pl-3">
-                      <span className="font-semibold">$190.91</span>
+                      <span className="font-semibold">Rp. 534.000</span>
                     </div>
                   </div>
                   <div className="w-full flex items-center">
@@ -144,7 +141,7 @@ export default function Page() {
                       <span className="text-gray-600">Taxes (GST)</span>
                     </div>
                     <div className="pl-3">
-                      <span className="font-semibold">$19.09</span>
+                      <span className="font-semibold">Rp. 20.00</span>
                     </div>
                   </div>
                 </div>
@@ -154,11 +151,11 @@ export default function Page() {
                       <span className="text-gray-600">Total</span>
                     </div>
                     <div className="pl-3">
-                      <span className="font-semibold text-gray-400 text-sm">
+                      {/* <span className="font-semibold text-gray-400 text-sm">
                         AUD
-                      </span>{" "}
+                      </span>{" "} */}
                       <span className="font-semibold text-[#404040]">
-                        $810.00
+                        Rp. 536.000
                       </span>
                     </div>
                   </div>
