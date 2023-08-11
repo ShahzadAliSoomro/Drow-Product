@@ -3,7 +3,13 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer/Footer'
-// import { AppProgressBar as ProgressBar } from 'next-nprogress-bar';
+import dynamic from 'next/dynamic'
+
+const Progress = dynamic(() => import('./components/progress/Progress'), {
+  loading: () => <p>Loading...</p>,
+  ssr: false
+})
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,7 +29,7 @@ export default function RootLayout({
          <Navbar activeRoute="/" />
         {children}
          <Footer />
-         {/* <ProgressBar /> */}
+        <Progress />
         </body>
     </html>
   )
