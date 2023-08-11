@@ -139,63 +139,94 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 </div>
               </Link>
               {/* Table to show when hovered */}
-              <div className="absolute top-full right-0 bg-[#fff] text-[#404040] p-4 rounded hidden border shadow group-hover:block w-64">
+              <div className="absolute animate-pulse top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80">
                 <div className="flex flex-col gap-5">
                   <div className=" ">
-                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p>
+                    {/* <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p> */}
                     <div className="flex pt-2 gap-3">
-                      <div >
-                        <Image src="/images/8.png" alt="8" width={160} height={160} className="" />
+                      <div>
+                        <Image
+                          src="/images/8.png"
+                          alt="8"
+                          width={100}
+                          height={100}
+                          className="w-24 h-24 "
+                        />
                       </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-base font-semibold">Euphoria Crop Blouse</p>
+                      <div className="flex flex-col gap-2">
+                        <p className="text-base font-semibold">
+                          Euphoria Crop Blouse
+                        </p>
                         <p className="text-base font-bold">Rp. 125.000</p>
                         <div className="flex gap-2">
                           <p>Qty: </p>
-                          <button className="text-lg border w-10 text-center">1</button>
-                          
+                          <button className="text-lg border w-10 text-center">
+                            1
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className=" ">
-                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 180.000</span> </p>
+                    {/* <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 180.000</span> </p> */}
                     <div className="flex pt-2 gap-3">
-                      <div >
-                        <Image src="/images/9.png" alt="8" width={160} height={160} className="" />
+                      <div>
+                        <Image
+                          src="/images/9.png"
+                          alt="8"
+                          width={100}
+                          height={100}
+                          className="w-24 h-24"
+                        />
                       </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-base font-semibold">Venus Halter Dress</p>
+                      <div className="flex flex-col gap-2">
+                        <p className="text-base font-semibold">
+                          Venus Halter Dress
+                        </p>
                         <p className="text-base font-bold">Rp. 180.000</p>
                         <div className="flex gap-2">
                           <p>Qty: </p>
-                          <button className="text-lg border w-10 text-center">1</button>
-                          
+                          <button className="text-lg border w-10 text-center">
+                            1
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className=" ">
-                    <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 229.000</span> </p>
+                    {/* <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 229.000</span> </p> */}
                     <div className="flex pt-2 gap-3">
-                      <div >
-                        <Image src="/images/11.png" alt="8" width={160} height={160} className="" />
+                      <div>
+                        <Image
+                          src="/images/11.png"
+                          alt="8"
+                          width={100}
+                          height={100}
+                          className="w-24 h-24"
+                        />
                       </div>
-                      <div className="flex flex-col gap-3">
-                        <p className="text-base font-semibold">West Bootscut Denim</p>
+                      <div className="flex flex-col gap-2">
+                        <p className="text-base font-semibold">
+                          West Bootscut Denim
+                        </p>
                         <p className="text-base font-bold">Rp. 229.000</p>
                         <div className="flex gap-2">
                           <p>Qty: </p>
-                          <button className="text-lg border w-10 text-center">1</button>
-                          
+                          <button className="text-lg border w-10 text-center">
+                            1
+                          </button>
                         </div>
                       </div>
                     </div>
                   </div>
+                  {/* <svg className="animate-bounce w-6 h-6 text-black">hello</svg> */}
                   <div className="flex justify-center hover:w-full">
-                  <Link href="/checkout" className="flex">
-                    <p className="text-blue-300 hover:underline hover:cursor-pointer hover:shadow hover:w-40 hover:text-center">View All Product</p>
-                  </Link>
+                    
+                    <Link href="/checkout" className="flex">
+                      <p className="text-blue-500 hover:underline hover:bg-[#F7F6F0] py-2 hover:text-[#404040] hover:cursor-pointer hover:shadow hover:w-40 hover:text-center">
+                        View All Product
+                      </p>
+                    </Link>
                   </div>
                 </div>
               </div>
