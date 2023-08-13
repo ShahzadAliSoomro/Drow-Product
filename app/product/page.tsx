@@ -213,7 +213,7 @@ export default function Page() {
               <div className="">
                 <Image src="/images/23.png" alt="" width={400} height={400} />
               </div>
-              <div className="flex text-[#404040] absolute gap-44 ">
+              <div className="flex text-[#404040] absolute lg:gap-44 gap-[150px] ">
                 <div className="flex flex-col p-2 text-sm font-semibold">
                   <h5>COLORFUL KNITWEAR</h5>
                   <h5>SERIES</h5>
