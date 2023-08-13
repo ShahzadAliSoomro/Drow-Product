@@ -6,7 +6,7 @@ import { BsFacebook } from "react-icons/bs";
 export default function Page() {
   return (
     <div>
-      <div className="flex items-center min-h-screen p-4 bg-gray-100 lg:justify-center">
+      <div className="flex items-center min-h-screen lg:p-4 p-2 bg-gray-100 lg:justify-center">
         <div className="flex flex-col overflow-hidden bg-white rounded-md shadow-lg max md:flex-row md:flex-1 lg:max-w-screen-md">
           <div className="p-4 py-6 text-[#404040] bg-[#F7F6F0] md:w-80 md:flex-shrink-0 md:flex md:flex-col md:items-center md:justify-evenly">
             <div className="my-3 text-4xl font-bold tracking-wider text-center">
@@ -111,11 +111,11 @@ export default function Page() {
               </div>
               <div className="flex flex-col space-y-5">
                 <span className="flex items-center justify-center space-x-2">
-                  <span className="h-px bg-gray-400 w-36"></span>
+                  <span className="h-px bg-gray-400 lg:w-36 w-24"></span>
                   <span className="font-normal text-[#404040]">
                     Or Login with
                   </span>
-                  <span className="h-px bg-gray-400 w-36"></span>
+                  <span className="h-px bg-gray-400 lg:w-36 w-24"></span>
                 </span>
                 <div className="flex flex-col space-y-4">
                   <Link

@@ -34,7 +34,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="h-6 w-6 text-black"
+              className="h-7 w-7 text-black"
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
