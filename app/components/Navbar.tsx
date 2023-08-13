@@ -19,6 +19,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
     setOpen(false);
   };
 
+
   return (
     <div className="w-full bg-[#fff] ">
       <div className="container mx-auto">
@@ -139,7 +140,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 </div>
               </Link>
               {/* Table to show when hovered */}
-              <div className="absolute animate-pulse hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80">
+              <div className="absolute hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80">
                 <div className="flex flex-col gap-5">
                   <div className=" ">
                     {/* <p className="text-base">Cart Subtotal:<span className="font-bold text-lg"> Rp. 125.000</span> </p> */}

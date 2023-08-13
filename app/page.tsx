@@ -37,7 +37,7 @@ export default function Home() {
       {/* ************************** FeatureCollection Component End ************************** */}
 
       {/* ************************* TestiProduct ==> TestiCard Component Start ************************* */}
-      <TestiCard />
+      {/* <TestiCard /> */}
       {/* ************************** TestiProduct ==> TestiCard Component End ************************** */}
 
       {/* ************************* ContactPage ==> ContactForm Component Start ************************* */}

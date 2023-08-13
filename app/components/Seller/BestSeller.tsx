@@ -162,7 +162,6 @@ const BestSeller = () => {
         <div
           style={{
             backgroundColor: "#ffff",
-            // borderRadius: "10px",
             padding: "10px",
             
           }}
@@ -195,7 +194,7 @@ const BestSeller = () => {
         <div className="text-center text-5xl font-bold text-[#404040]">
            <h2 className="">Our Best Seller</h2>
         </div>
-        <div className="lg:w-[1240px] mx-auto">
+        <div className="lg:w-[1240px] mx-auto ">
       <Slider {...settings} >
       {CardData.map((data) => (
             <div key={data.id} className="">
@@ -223,6 +222,37 @@ const BestSeller = () => {
       </div>
       
     </div>
+  //   <div className="mx-auto w-full container bg-white p-6">
+  //   <div className="text-center text-5xl font-bold text-[#404040]">
+  //     <h2 className="">Our Best Seller</h2>
+  //   </div>
+  //   <div className="lg:w-[90%] mx-auto">
+  //     <Slider {...settings}>
+  //       {CardData.map((data) => (
+  //         <div key={data.id} className="px-2">
+  //           <div className="flex justify-center items-center">
+  //             <div className="hover:-translate-y-3 transition-all duration-500">
+  //               <Image
+  //                 className="mx-auto"
+  //                 src={data.image}
+  //                 alt=""
+  //                 width={500}
+  //                 height={500}
+                  
+  //               />
+  //               <div className="text-center mt-2">
+  //                 <p className="text-lg font-semibold text-[#404040]">
+  //                   {data.title}
+  //                 </p>
+  //                 <p className="text-sm text-[#707070] pb-3">{data.price}</p>
+  //               </div>
+  //             </div>
+  //           </div>
+  //         </div>
+  //       ))}
+  //     </Slider>
+  //   </div>
+  // </div>
   );
 };
 
