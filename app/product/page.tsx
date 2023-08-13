@@ -213,12 +213,12 @@ export default function Page() {
               <div className="">
                 <Image src="/images/23.png" alt="" width={400} height={400} />
               </div>
-              <div className="flex text-[#404040] absolute gap-44">
-                <div className="flex flex-col p-2 text-sm font-semibold">
+              <div className="flex text-[#404040] absolute lg:gap-44 gap-[156px]">
+                <div className="flex flex-col p-2 lg:text-sm text-xs font-semibold">
                   <h5>COLORFUL KNITWEAR</h5>
                   <h5>SERIES</h5>
                 </div>
-                <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
+                <div className="bg-[#F7F6F0] lg:w-14 w-12 rounded-t-lg">
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
