@@ -201,7 +201,7 @@ const BestSeller = () => {
               <div className="flex justify-center items-center">
                 <div className=" hover:-translate-y-3 transition-all duration-500">
                   <Image
-                    className="mx-auto h-full w-full"
+                    className="mx-auto h-full lg:w-full "
                     src={data.image}
                     alt=""
                     width={400} // Adjust this value as needed

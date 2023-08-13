@@ -20,7 +20,7 @@ export default function FeatureCollection() {
                   <h5>COLORFUL KNITWEAR</h5>
                   <h5>SERIES</h5>
                 </div>
-                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[294px]">
+                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[281px]">
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
@@ -34,7 +34,7 @@ export default function FeatureCollection() {
                   <h5>PANTS MADE SPECIAL</h5>
                   <h5>SERIES</h5>
                 </div>
-                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[294px]">
+                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[281px]">
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
@@ -50,7 +50,7 @@ export default function FeatureCollection() {
                 <h5>JIWOO MADE SPECIAL</h5>
                 <h5>SERIES</h5>
               </div>
-              <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute opacity-50 lg:left-[344px] left-[294px]">
+              <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute opacity-50 lg:left-[344px] left-[281px]">
                 <PiArrowBendUpRightLight className="w-12 h-12" />
               </div>
             </div>
@@ -67,7 +67,7 @@ export default function FeatureCollection() {
                   <h5>FRESHIDER TOP MADE</h5>
                   <h5>SERIES</h5>
                 </div>
-                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[294px]">
+                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[281px]">
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function FeatureCollection() {
                   <h5 >SWEETESTS DRESSES</h5>
                   <h5>SERIES</h5>
                 </div>
-                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[294px]"> 
+                <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[281px]"> 
                   <PiArrowBendUpRightLight className="w-12 h-12" />
                 </div>
               </div>
