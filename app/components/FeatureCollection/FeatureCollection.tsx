@@ -50,7 +50,7 @@ export default function FeatureCollection() {
                 <h5>JIWOO MADE SPECIAL</h5>
                 <h5>SERIES</h5>
               </div>
-              <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute opacity-50 lg:left-[344px] left-[281px]">
+              <div className="bg-[#F7F6F0] w-14 h-14 rounded-t-lg absolute lg:left-[344px] left-[281px]">
                 <PiArrowBendUpRightLight className="w-12 h-12" />
               </div>
             </div>
