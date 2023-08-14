@@ -108,7 +108,7 @@ const TestiCard = () => {
         <div className="lg:w-[1240px] mx-auto">
         <Slider {...settings}>
           {CardData.map((data) => (
-            <div key={data.id} className="">
+            <div key={data.id} className="lg:p-2 p-0">
               <div className="flex justify-center">
                 <div className="bg-[#F7F6F0] p-2 rounded-lg shadow-md hover:-translate-y-3 transition-all duration-500">
                   <Image
