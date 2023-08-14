@@ -100,7 +100,7 @@ const TestiCard = () => {
   };
 
   return (
-    <div className="mx-auto w-full container bg-[#fff] space-y-2 lg:p-0 p-2">
+    <div className="mx-auto w-full container bg-[#fff] space-y-2 lg:p-0 p-6">
       
         <div className="flex justify-center items-center lg:text-5xl text-4xl font-bold text-[#404040]">
           <h2>What They Said</h2>

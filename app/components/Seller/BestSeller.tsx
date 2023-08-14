@@ -82,7 +82,7 @@ const BestSeller = () => {
   };
 
   return (
-    <div className="mx-auto w-full container bg-[#fff] space-y-5 lg:p-0 p-5">
+    <div className="mx-auto w-full container bg-[#fff] space-y-5 lg:p-0 p-6">
         
         <div className="text-center lg:text-5xl text-3xl font-bold text-[#404040]">
            <h2 className="">Our Best Seller</h2>
