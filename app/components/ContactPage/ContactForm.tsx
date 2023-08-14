@@ -64,13 +64,13 @@ export default function ContactForm() {
              <div className="border-b-2 w-1/2 border-black"></div>
              </div>
             </div>
-            <div className='flex justify-center text-base hover:-translate-y-1 transition-all duration-500'>
+            <div className='flex justify-center lg:text-base text-sm hover:-translate-y-1 transition-all duration-500'>
               <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
               <FcGoogle className="w-5 h-5"/>
              <button className='text-[#404040] p-2'>SIGN UP WITH GOOGLE</button>
              </div>
              </div>
-             <div className='flex justify-center text-base hover:-translate-y-1 transition-all duration-500'>
+             <div className='flex justify-center lg:text-base text-sm hover:-translate-y-1 transition-all duration-500'>
               <div className="bg-[#FFFFFF] px-3 flex rounded-full items-center">
              <BsFacebook className="w-5 h-5 text-blue-700"/>
              <button className='text-[#404040] p-2  '>SIGN UP WITH FACEBOOK</button>
