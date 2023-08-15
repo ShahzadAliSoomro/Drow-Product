@@ -1,50 +1,58 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { BsCart2 } from "react-icons/bs";
 
 const CardData = [
       {
         id: 1,
         image: "/images/8.png",
+        hoveredImage: "/images/13.png",
         title: "Euphoria Crop Blouse",
         price: "Rp. 125.000",
       },
       {
         id: 2,
         image: "/images/9.png",
+        hoveredImage: "/images/12.png",
         title: "Venus Halter Dress",
         price: "Rp. 180.000",
       },
       {
         id: 3,
         image: "/images/10.png",
+        hoveredImage: "/images/11.png",
         title: "Snap Pure Blouse",
         price: "Rp. 129.000",
       },
       {
         id: 4,
         image: "/images/11.png",
+        hoveredImage: "/images/8.png",
         title: "West Bootscut Denim",
         price: "Rp. 229.000",
       },
       {
         id: 5,
         image: "/images/12.png",
+        hoveredImage: "/images/9.png",
         title: "Ribbon Check Long",
         price: "Rp. 175.000",
       },
       {
         id: 6,
         image: "/images/13.png",
+        hoveredImage: "/images/10.png",
         title: "Shouldcut Knit",
         price: "Rp. 149.000",
       },
     ];
 
 const BestSeller = () => {
+  const [hovered, setHovered] = useState(0);
   const settings = {
     dots: true,
     infinite: true,
@@ -92,19 +100,31 @@ const BestSeller = () => {
       {CardData.map((data) => (
             <div key={data.id} className="">
               <div className="flex justify-center items-center">
-                <div className=" hover:-translate-y-3 transition-all duration-500">
+                <div className="relative hover:-translate-y-3 transition-all duration-500">
                   <Image
                     className="mx-auto"
-                    src={data.image}
+                    src={
+                      hovered === data.id
+                        ? (data.hoveredImage || data.image) as string
+                        : data.image
+                    } // Change image based on hovered state
                     alt=""
                     width={400} // Adjust this value as needed
                     height={400} // Adjust this value as needed
+                    onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
+                    onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
                   />
                   <div className="text-center mt-2">
                     <p className="text-lg font-semibold text-[#404040]">
                       {data.title}
                     </p>
                     <p className="text-sm text-[#707070] pb-5">{data.price}</p>
+                  </div>
+                  <div className={`absolute top-52 left-24 flex justify-between gap-32 ${
+                    hovered === data.id ? "visible" : "invisible"
+                  } text-white`}>
+                    <BsCart2 className={`h-10 w-10`} />
+                    <BsCart2 className={`h-10 w-10`} />
                   </div>
                 </div>
               </div>
@@ -119,36 +139,4 @@ const BestSeller = () => {
 };
 
 export default BestSeller;
-  //   <div className="mx-auto w-full container bg-white p-6">
-  //   <div className="text-center text-5xl font-bold text-[#404040]">
-  //     <h2 className="">Our Best Seller</h2>
-  //   </div>
-  //   <div className="lg:w-[90%] mx-auto">
-  //     <Slider {...settings}>
-  //       {CardData.map((data) => (
-  //         <div key={data.id} className="px-2">
-  //           <div className="flex justify-center items-center">
-  //             <div className="hover:-translate-y-3 transition-all duration-500">
-  //               <Image
-  //                 className="mx-auto"
-  //                 src={data.image}
-  //                 alt=""
-  //                 width={500}
-  //                 height={500}
-                  
-  //               />
-  //               <div className="text-center mt-2">
-  //                 <p className="text-lg font-semibold text-[#404040]">
-  //                   {data.title}
-  //                 </p>
-  //                 <p className="text-sm text-[#707070] pb-3">{data.price}</p>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       ))}
-  //     </Slider>
-  //   </div>
-  // </div>
-  
 
