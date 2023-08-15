@@ -135,9 +135,25 @@ const SellerCard = [
 
 export default function Page() {
   return (
-    <div className="w-full bg-[#fff] pt-10">
+    <div className="w-full bg-[#fff]">
+      <div className="w-full bg-[#F5F5F5]">
+          <div className="mx-auto container flex justify-center items-center text-center">
+            <div className="p-5 space-y-8  text-[#404040]">
+              <h2 className="lg:text-5xl text-3xl font-bold">Our New Arrivals</h2>
+              <div className="flex justify-center items-center">
+                <p className="w-5/12">
+              Avoid overwhelm when it comes to planning your website with our free content planner. 
+              Learn how to create a plan to creating a successful website for your business.</p>
+              </div>
+              <div className="">
+                <button className="bg-[#fff] p-3 font-semibold text-lg rounded shadow-md hover:-translate-y-3 transition-all duration-500">
+                  Get Free Trial</button>
+              </div>
+            </div>
+          </div>
+        </div>
       <div className="container mx-auto space-y-10 lg:p-0 p-3">
-        <div className="flex justify-center items-center lg:text-5xl text-3xl font-bold text-[#404040]">
+        <div className="flex justify-center items-center pt-5 lg:text-5xl text-3xl font-bold text-[#404040]">
           <h2>Get Upto 50%</h2>
         </div>
         <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
