@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
-import { BsCart2 } from "react-icons/bs";
+import { BsCart2, BsSuitHeartFill } from "react-icons/bs";
 
 const CardData = [
       {
@@ -64,7 +64,6 @@ const BestSeller = () => {
           style={{
             backgroundColor: "#ffff",
             padding: "10px",
-            
           }}
         >
           <ul style={{ margin: "0px",  }}> {dots} </ul>
@@ -101,6 +100,7 @@ const BestSeller = () => {
             <div key={data.id} className="">
               <div className="flex justify-center items-center">
                 <div className="relative hover:-translate-y-3 transition-all duration-500">
+                  <div className="w-full h-full">
                   <Image
                     className="mx-auto"
                     src={
@@ -114,19 +114,30 @@ const BestSeller = () => {
                     onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
                     onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
                   />
+                  </div>
                   <div className="text-center mt-2">
                     <p className="text-lg font-semibold text-[#404040]">
                       {data.title}
                     </p>
                     <p className="text-sm text-[#707070] pb-5">{data.price}</p>
                   </div>
-                  <div className={`absolute top-52 left-24 flex justify-between gap-32 ${
+                  <div className={`absolute top-0 w-full ${
                     hovered === data.id ? "visible" : "invisible"
                   } text-white`}
                   
                   >
-                    <BsCart2 className={`h-10 w-10`} />
-                    <BsCart2 className={`h-10 w-10`} />
+                    <div className="absolute top-[457px] left-0 flex justify-center items-center bg-black p-2 w-[400px]">
+                    <BsCart2 className={`h-10 w-10`} 
+                    onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
+                    onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
+                    />
+                    </div>
+                    <div className="absolute top-5 left-[340px]">
+                    <BsSuitHeartFill className={`h-10 w-10 text-red-500`} 
+                    onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
+                    onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
+                    />
+                    </div>
                   </div>
                 </div>
               </div>

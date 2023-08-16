@@ -123,7 +123,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
               </div>
             </div>
             <div className="relative group hidden md:block transition-all duration-500">
-              <Link href="/checkout">
+              <Link href="/">
                 <div
                   onClick={() => handleLinkClick("/checkout")}
                   className={`${
