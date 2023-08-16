@@ -1,6 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
-import { BsArrowRight } from "react-icons/bs";
+import { BsArrowRight, BsCart2 } from "react-icons/bs";
 
 const CardData = [
   {
@@ -42,22 +43,33 @@ const CardData = [
 ];
 
 export default function TopProduct() {
+  const [hovered, setHovered] = useState(0);
   return (
     <div className="mx-auto w-full container ">
       <div className="lg:p-5 p-5 justify-center items-center bg-[#F5F5F5]">
-      <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+        <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {CardData.map((item) => (
-            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
+            <div className="relative flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
               <Image
                 src={item.image}
                 alt="5Image"
                 width={400}
                 height={400}
                 className="h-full"
+                onMouseEnter={() => setHovered(item.id)}
+                onMouseLeave={() => setHovered(0)}
               />
               <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
                 <p>{item.title}</p>
                 <p>{item.price}</p>
+              </div>
+              <div
+                className={`absolute top-52 left-24 flex justify-between gap-32 ${
+                  hovered === item.id ? "visible" : "invisible"
+                } text-white`}
+              >
+                <BsCart2 className={`h-10 w-10`} />
+                <BsCart2 className={`h-10 w-10`} />
               </div>
             </div>
           ))}
