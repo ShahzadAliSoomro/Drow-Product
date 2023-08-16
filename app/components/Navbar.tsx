@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
-import { BsCart2 } from "react-icons/bs";
+import { BsCart2, BsSuitHeart } from "react-icons/bs";
 import Image from "next/image";
 
 interface NavbarProps {
@@ -122,6 +122,38 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 <AiOutlineSearch className="w-5 h-5" />
               </div>
             </div>
+            <div className="relative group hidden md:block transition-all duration-500">
+              <Link href="/checkout">
+                <div
+                  onClick={() => handleLinkClick("/checkout")}
+                  className={`${
+                    activeLink === "/checkout"
+                      ? "border-b-2 border-blue-500"
+                      : ""
+                  }`}
+                >
+                  <BsSuitHeart className="w-6 h-6" />
+                  {/* Display the cart count as a badge */}
+                  <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center">
+                    0
+                  </span>
+                </div>
+              </Link>
+              <div className="absolute hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80 h-80">
+                <div className="flex flex-col gap-5">
+                  <div className="flex justify-center items-center flex-col gap-3 pt-3">
+                    <div className="relative">
+                    <BsSuitHeart className="w-6 h-6" />
+                    <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gray-300 text-white rounded-full w-5 h-5 flex justify-center items-center">
+                    0
+                  </span>
+                    </div>
+                    <h4>MY WISHLIST</h4>
+                  </div>
+                </div>
+                <p className="text-center pt-5">No Product in the wishlist.</p>
+              </div>
+            </div>
             <div className="relative group transition-all duration-500">
               <Link href="/checkout">
                 <div
@@ -232,6 +264,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                 </div>
               </div>
             </div>
+            
 
             {/* <div className="relative hover:-translate-x-1 transition-all duration-500">
               <Link href="/checkout">
