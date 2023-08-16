@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 
 const SellerCard = [
@@ -131,9 +132,51 @@ const SellerCard = [
   },
 ];
 
+const colorOptions = [
+  "bg-green-500",
+  "bg-red-500",
+  "bg-blue-500",
+  "bg-yellow-500",
+  "bg-purple-500",
+];
+const textColors = [
+  "text-green-600",
+  "text-red-600",
+  "text-blue-600",
+  "text-yellow-600",
+  "text-purple-600",
+];
 
 
 export default function Page() {
+  const [currentColor, setCurrentColor] = useState("");
+  const [currentTextColor, setCurrentTextColor] = useState("");
+
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomColor =
+        colorOptions[Math.floor(Math.random() * colorOptions.length)];
+      setCurrentColor(randomColor);
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomColor =
+        textColors[Math.floor(Math.random() * textColors.length)];
+      setCurrentTextColor(randomColor);
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="w-full bg-[#fff]">
       <div className="w-full bg-[#F5F5F5]">
@@ -152,13 +195,18 @@ export default function Page() {
             </div>
           </div>
         </div>
-      <div className="container mx-auto space-y-10 lg:p-0 p-3">
+      <div className="container mx-auto space-y-10 lg:p-0 p-3 ">
         <div className="flex justify-center items-center pt-5 lg:text-5xl text-3xl font-bold text-[#404040]">
-          <h2>Get Upto 50%</h2>
+        <h2>
+          Get Upto{""}
+          <span className={`font-semibold p-2 rounded-full shimmer ${currentTextColor}`}>
+            50%
+          </span>
+        </h2>
         </div>
-        <div className="lg:w-[1240px] w-full mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
+        <div className="lg:w-[1240px] w-full relative mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {SellerCard.map((item) => (
-            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500">
+            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500 group">
               <Image
                 src={item.image}
                 alt="5Image"
@@ -171,6 +219,12 @@ export default function Page() {
                 <p>{item.title}</p>
                 <p>{item.price}</p>
               </div>
+              <div className="m-3 absolute z-10">
+              <p className={`text-white font-semibold p-2 rounded-full ${currentColor} shimmer`}>
+                Sale
+              </p>
+            </div>
+                {/* <p className="m-3 absolute z-10 text-black bg-green-500 p-2 rounded-full">Sale</p> */}
             </div>
           ))}
         </div>
