@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
+import { BsCart2, BsSuitHeartFill, BsSuitHeart } from "react-icons/bs";
 // import Image from "next/image";
 
 const CardData = [
@@ -60,6 +61,7 @@ const CardData = [
 
 const TestiCard = () => {
   const [hovered, setHovered] = useState(0);
+  const [liked, setLiked] = useState(false);
   const settings = {
     dots: true,
     infinite: true,
@@ -133,6 +135,36 @@ const TestiCard = () => {
                     onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
                     
                   />
+                  <div className="absolute hidden md:block top-[433px] left-2 bg-black p-2 w-[383px]">
+                    <div className="flex justify-center">
+                      <BsCart2
+                        className={`h-10 w-10 `}
+                        onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
+                        onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
+                      />
+                      </div>
+                    </div>
+                  <div className="absolute top-5 left-[340px]">
+                      <BsSuitHeart
+                        className={`h-10 w-10 ${liked ? "" : "text-white"}`}
+                        onClick={() => setLiked(!liked)}
+                        onMouseEnter={() => setHovered(data.id)}
+                        onMouseLeave={() => setHovered(0)}
+                      />
+                      <div className="absolute top-0 left-[px]">
+                      {liked && (
+                        
+                        <BsSuitHeartFill
+                          className={`h-10 w-10 text-red-500 ${
+                            hovered === data.id ? "text-yellow-400" : ""
+                          }`}
+                          onClick={() => setLiked(!liked)}
+                          onMouseEnter={() => setHovered(data.id)}
+                          onMouseLeave={() => setHovered(0)}
+                        />
+                      )}
+                      </div>
+                    </div>
                   <div className="text-center mt-2">
                     <p className="text-lg text-[#404040] font-semibold">{data.title}</p>
                     <div className="flex justify-center gap-1">
