@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { BsCart2, BsSuitHeart } from "react-icons/bs";
@@ -9,11 +9,30 @@ import Image from "next/image";
 interface NavbarProps {
   activeRoute: string;
 }
+const textColors = [
+  "text-green-600",
+  "text-red-600",
+  "text-blue-600",
+  "text-yellow-600",
+  "text-purple-600",
+];
 export default function Navbar({ activeRoute }: NavbarProps) {
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
-  
+  const [currentTextColor, setCurrentTextColor] = useState("");
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomColor =
+        textColors[Math.floor(Math.random() * textColors.length)];
+      setCurrentTextColor(randomColor);
+    }, 2000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+  
   const handleLinkClick = (route: string) => {
     setActiveLink(route); // Update the active link when a link is clicked
     setOpen(false);
@@ -94,7 +113,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
               <Link href="/sale">
                 <p
                   onClick={() => handleLinkClick("/sale")}
-                  className={`${
+                  className={`shimmer ${currentTextColor}  ${
                     activeLink === "/sale" ? "border-b-2 border-blue-500" : ""
                   }`}
                 >
