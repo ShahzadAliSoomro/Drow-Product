@@ -224,7 +224,6 @@ export default function Page() {
                 Sale
               </p>
             </div>
-                {/* <p className="m-3 absolute z-10 text-black bg-green-500 p-2 rounded-full">Sale</p> */}
             </div>
           ))}
         </div>
