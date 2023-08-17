@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { BsCart2, BsSuitHeartFill, BsSuitHeart } from "react-icons/bs";
 
 const SellerCard = [
   {
@@ -151,6 +152,8 @@ const textColors = [
 export default function Page() {
   const [currentColor, setCurrentColor] = useState("");
   const [currentTextColor, setCurrentTextColor] = useState("");
+  const [hovered, setHovered] = useState(0);
+  const [liked, setLiked] = useState(false);
 
 
   useEffect(() => {
@@ -206,13 +209,19 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full relative mx-auto grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
           {SellerCard.map((item) => (
-            <div className="flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500 group">
+            <div className="relative flex gap-4 flex-col hover:-translate-y-3 transition-all duration-500 group">
               <Image
-                src={item.image}
+                 src={
+                  hovered === item.id
+                    ? ((item.image || item.image) as string)
+                    : item.image
+                } // Change image based on hovered state
                 alt="5Image"
                 width={400}
                 height={400}
-                className="h-full"
+                className="h-[500px]"
+                onMouseEnter={() => setHovered(item.id)} // Set hovered state to data id on mouse enter
+                onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
               />
               <div className="flex justify-center flex-col items-center text-lg text-[#404040]">
               <p className="text-green-600 font-semibold">{item.discount}</p>
@@ -224,6 +233,40 @@ export default function Page() {
                 Sale
               </p>
             </div>
+            <div
+                    className={`absolute top-0 w-full ${
+                      hovered === item.id ? "visible" : "invisible"
+                    } text-white`}
+                  >
+                    <div className="absolute top-[450px] left-0 flex justify-center items-center bg-black p-2 w-[400px]">
+                      <BsCart2
+                        className={`h-10 w-10`}
+                        onMouseEnter={() => setHovered(item.id)} // Set hovered state to items id on mouse enter
+                        onMouseLeave={() => setHovered(0)} // Reset hovered state to 0 on mouse leave
+                      />
+                    </div>
+                    <div className="absolute top-5 left-[340px]">
+                      <BsSuitHeart
+                        className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
+                        onClick={() => setLiked(!liked)}
+                        onMouseEnter={() => setHovered(item.id)}
+                        onMouseLeave={() => setHovered(0)}
+                      />
+                      <div className="absolute top-0 left-[px]">
+                      {liked && (
+                        
+                        <BsSuitHeartFill
+                          className={`h-10 w-10 text-red-500 ${
+                            hovered === item.id ? "text-red-500" : ""
+                          }`}
+                          onClick={() => setLiked(!liked)}
+                          onMouseEnter={() => setHovered(item.id)}
+                          onMouseLeave={() => setHovered(0)}
+                        />
+                      )}
+                      </div>
+                    </div>
+                  </div>
             </div>
           ))}
         </div>
