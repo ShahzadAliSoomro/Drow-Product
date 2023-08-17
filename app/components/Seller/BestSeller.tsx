@@ -61,7 +61,7 @@ const BestSeller = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-  
+
     customPaging: () => (
       <div>
         <TbCircleDotted className="w-12 h-12 p-4 dot-animate" />
@@ -97,8 +97,8 @@ const BestSeller = () => {
             <div key={data.id} className="">
               <div className="flex justify-center items-center relative">
                 <div className="relative hover:-translate-y-3 transition-all duration-500">
-                  <div 
-                   className={`relative w-[400px] h-[500px] hover:-translate-y-3 transition-all duration-500`}
+                  <div
+                    className={`relative w-[400px] h-[500px] hover:-translate-y-3 transition-all duration-500`}
                   >
                     <Image
                       className="mx-auto w-full h-full"
@@ -140,17 +140,16 @@ const BestSeller = () => {
                         onMouseLeave={() => setHovered(0)}
                       />
                       <div className="absolute top-0 left-[px]">
-                      {liked && (
-                        
-                        <BsSuitHeartFill
-                          className={`h-10 w-10 text-red-500 ${
-                            hovered === data.id ? "text-red-500" : ""
-                          }`}
-                          onClick={() => setLiked(!liked)}
-                          onMouseEnter={() => setHovered(data.id)}
-                          onMouseLeave={() => setHovered(0)}
-                        />
-                      )}
+                        {liked && (
+                          <BsSuitHeartFill
+                            className={`h-10 w-10 text-red-500 ${
+                              hovered === data.id ? "text-red-500" : ""
+                            }`}
+                            onClick={() => setLiked(!liked)}
+                            onMouseEnter={() => setHovered(data.id)}
+                            onMouseLeave={() => setHovered(0)}
+                          />
+                        )}
                       </div>
                     </div>
                   </div>
