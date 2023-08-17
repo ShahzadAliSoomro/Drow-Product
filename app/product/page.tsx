@@ -251,7 +251,7 @@ export default function Page() {
                       hovered === item.id ? "visible" : "invisible"
                     } text-white`}
                   >
-                    <div className="absolute top-[450px] left-0 flex justify-center items-center bg-black p-2 w-[400px]">
+                    <div className="absolute top-[460px] left-0 flex justify-center items-center bg-black p-2 w-[400px]">
                       <BsCart2
                         className={`h-10 w-10`}
                         onMouseEnter={() => setHovered(item.id)} // Set hovered state to item id on mouse enter
@@ -346,13 +346,13 @@ export default function Page() {
         </div>
         <div className="lg:w-[1240px] w-full mx-auto flex justify-center relative gap-5 flex-wrap lg:flex-nowrap">
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500 relative">
               <div className="">
                 <Image src="/images/23.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute right-0 lg:gap-44 gap-[156px]">
                 <div className="flex flex-col p-2 lg:text-sm text-xs font-semibold">
-                  <h5>COLORFUL KNITWEAR</h5>
+                  <h5>COLORFU KNITWEAR</h5>
                   <h5>SERIES</h5>
                 </div>
                 <div className="bg-[#F7F6F0] lg:w-14 w-12 rounded-t-lg">
@@ -360,13 +360,13 @@ export default function Page() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500 relative">
               <div className="">
                 <Image src="/images/24.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute right-0 lg:gap-44 gap-[156px] ">
                 <div className="flex flex-col p-2 lg:text-sm text-xs font-semibold">
-                  <h5>PANTS MADE SPECIAL</h5>
+                  <h5>PANT MADE SPECIAL</h5>
                   <h5>SERIES</h5>
                 </div>
                 <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
@@ -376,13 +376,13 @@ export default function Page() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+          <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500 relative">
             <div className="h-full ">
               <Image src="/images/25.png" alt="" width={400} height={400} className="h-full"/>
             </div>
             <div className="flex text-[#404040] absolute right-0 lg:gap-44 gap-[156px]">
               <div className="flex flex-col p-2 lg:text-sm text-xs font-semibold">
-                <h5>JIWOO MADE SPECIAL</h5>
+                <h5>JIWO MADE SPECIAL</h5>
                 <h5>SERIES</h5>
               </div>
               <div className="bg-[#F7F6F0] w-14 rounded-t-lg">
@@ -392,7 +392,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col gap-5">
-            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500 relative">
               
               <div className="">
                 <Image src="/images/26.png" alt="" width={400} height={400} />
@@ -408,13 +408,13 @@ export default function Page() {
               </div>
               
             </div>
-            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500">
+            <div className="flex flex-col justify-end hover:-translate-y-3 transition-all duration-500 relative">
               <div className="">
                 <Image src="/images/27.png" alt="" width={400} height={400} />
               </div>
               <div className="flex text-[#404040] absolute right-0 lg:gap-44 gap-[156px]">
                 <div className="flex flex-col p-2 lg:text-sm text-xs font-semibold">
-                  <h5>SWEETESTES DRESSES</h5>
+                  <h5>SWEETESTES DRESS</h5>
                   <h5>SERIES</h5>
                 </div>
                 <div className="bg-[#F7F6F0] lg:w-14 rounded-t-lg"> 
