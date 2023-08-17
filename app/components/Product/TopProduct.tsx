@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { BsArrowRight, BsCart2 } from "react-icons/bs";
 
@@ -41,9 +41,30 @@ const CardData = [
     price: "Rp. 225.000",
   },
 ];
+const colorOptions = [
+  "bg-green-500",
+  "bg-red-500",
+  "bg-blue-500",
+  "bg-yellow-500",
+  "bg-purple-500",
+];
 
 export default function TopProduct() {
   const [hovered, setHovered] = useState(0);
+  const [currentColor, setCurrentColor] = useState("");
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const randomColor =
+        colorOptions[Math.floor(Math.random() * colorOptions.length)];
+      setCurrentColor(randomColor);
+    }, 3000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
   return (
     <div className="mx-auto w-full container ">
       <div className="lg:p-5 p-5 justify-center items-center bg-[#F5F5F5]">
@@ -63,6 +84,11 @@ export default function TopProduct() {
                 <p>{item.title}</p>
                 <p>{item.price}</p>
               </div>
+              <div className="m-3 absolute z-10">
+              <p className={`text-white font-semibold p-2 rounded-full ${currentColor} shimmer`}>
+                New
+              </p>
+            </div>
               <div
                 className={`absolute top-52 left-24 flex justify-between gap-32 ${
                   hovered === item.id ? "visible" : "invisible"

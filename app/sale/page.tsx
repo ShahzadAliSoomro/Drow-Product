@@ -141,11 +141,11 @@ const colorOptions = [
   "bg-purple-500",
 ];
 const textColors = [
-  "text-green-600",
-  "text-red-600",
-  "text-blue-600",
-  "text-yellow-600",
   "text-purple-600",
+  "text-blue-600",
+  "text-green-600",
+  "text-yellow-600",
+  "text-red-600",
 ];
 
 
