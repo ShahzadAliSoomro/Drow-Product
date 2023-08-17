@@ -136,7 +136,7 @@ const TestiCard = () => {
                     
                   />
                   <div className="absolute hidden md:block top-[433px] left-2 bg-black p-2 w-[383px]">
-                    <div className="flex justify-center">
+                    <div className="flex justify-center text-white">
                       <BsCart2
                         className={`h-10 w-10 `}
                         onMouseEnter={() => setHovered(data.id)} // Set hovered state to data id on mouse enter
@@ -146,7 +146,7 @@ const TestiCard = () => {
                     </div>
                   <div className="absolute top-5 left-[340px]">
                       <BsSuitHeart
-                        className={`h-10 w-10 ${liked ? "" : "text-white"}`}
+                        className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
                         onClick={() => setLiked(!liked)}
                         onMouseEnter={() => setHovered(data.id)}
                         onMouseLeave={() => setHovered(0)}
@@ -156,7 +156,7 @@ const TestiCard = () => {
                         
                         <BsSuitHeartFill
                           className={`h-10 w-10 text-red-500 ${
-                            hovered === data.id ? "text-yellow-400" : ""
+                            hovered === data.id ? "text-red-500" : ""
                           }`}
                           onClick={() => setLiked(!liked)}
                           onMouseEnter={() => setHovered(data.id)}

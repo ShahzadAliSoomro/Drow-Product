@@ -148,7 +148,7 @@ const BestSeller = () => {
                     </div>
                     <div className="absolute top-5 left-[340px]">
                       <BsSuitHeart
-                        className={`h-10 w-10 ${liked ? "" : "text-white"}`}
+                        className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
                         onClick={() => setLiked(!liked)}
                         onMouseEnter={() => setHovered(data.id)}
                         onMouseLeave={() => setHovered(0)}
@@ -158,7 +158,7 @@ const BestSeller = () => {
                         
                         <BsSuitHeartFill
                           className={`h-10 w-10 text-red-500 ${
-                            hovered === data.id ? "text-yellow-400" : ""
+                            hovered === data.id ? "text-red-500" : ""
                           }`}
                           onClick={() => setLiked(!liked)}
                           onMouseEnter={() => setHovered(data.id)}
