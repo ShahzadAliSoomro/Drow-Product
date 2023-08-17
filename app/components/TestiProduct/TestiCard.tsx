@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { BsCart2, BsSuitHeartFill, BsSuitHeart } from "react-icons/bs";
+import { TbCircleDotted } from "react-icons/tb";
 // import Image from "next/image";
 
 const CardData = [
@@ -68,26 +69,9 @@ const TestiCard = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    appendDots: (
-      dots:
-        | string
-        | number
-        | boolean
-        | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-        | Iterable<React.ReactNode>
-        | React.ReactPortal
-        | React.PromiseLikeOfReactNode
-        | null
-        | undefined
-    ) => (
-      <div
-        style={{
-          backgroundColor: "#ffff",
-          // borderRadius: "10px",
-          padding: "0px",
-        }}
-      >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+    customPaging: () => (
+      <div>
+        <TbCircleDotted className="w-12 h-12 p-4 dot-animate" />
       </div>
     ),
 

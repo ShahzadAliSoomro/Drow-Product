@@ -37,3 +37,15 @@
     opacity: 0.8;
   }
 }
+
+.slick-active .dot-animate {
+  width: 3.2rem;
+  height: 3.2rem;
+  margin: 0 auto;
+  display: flex;
+  margin-top: -5px;
+  justify-content: center;
+  align-items: center;
+  transition: width 0.2s, height 0.2s;
+  transition-timing-function: ease-in-out;
+}

@@ -89,14 +89,14 @@ export default function TopProduct() {
                 New
               </p>
             </div>
-              <div
+              {/* <div
                 className={`absolute top-52 left-24 flex justify-between gap-32 ${
                   hovered === item.id ? "visible" : "invisible"
                 } text-white`}
               >
                 <BsCart2 className={`h-10 w-10`} />
                 <BsCart2 className={`h-10 w-10`} />
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
