@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
 import { BsCart2, BsSuitHeart } from "react-icons/bs";
+import { useLikedProducts } from "../context/LikedProductsContext";
 import Image from "next/image";
 
 interface NavbarProps {
@@ -16,10 +17,13 @@ const textColors = [
   "text-yellow-600",
   "text-purple-600",
 ];
-export default function Navbar({ activeRoute }: NavbarProps) {
+export default function Navbar({ activeRoute }: NavbarProps)  {
+  const { likedProducts } = useLikedProducts();
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
   const [currentTextColor, setCurrentTextColor] = useState("");
+  // const isMobile = UseMobileSize();
+  // const scroll = UseScroll();
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,7 +41,6 @@ export default function Navbar({ activeRoute }: NavbarProps) {
     setActiveLink(route); // Update the active link when a link is clicked
     setOpen(false);
   };
-
 
   return (
     <div className="w-full bg-[#fff] ">
@@ -154,7 +157,7 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                   <BsSuitHeart className="w-6 h-6" />
                   {/* Display the cart count as a badge */}
                   <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white rounded-full w-5 h-5 flex justify-center items-center">
-                    0
+                    {likedProducts.length}
                   </span>
                 </div>
               </Link>

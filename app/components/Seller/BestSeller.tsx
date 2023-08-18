@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import { BsCart2, BsSuitHeartFill, BsSuitHeart } from "react-icons/bs";
 import { TbCircleDotted } from "react-icons/tb";
+import { useLikedProducts } from "@/app/context/LikedProductsContext";
 
 const CardData = [
   {
@@ -53,8 +54,12 @@ const CardData = [
 ];
 
 const BestSeller = () => {
+  const { likedProducts, toggleLike } = useLikedProducts();
   const [hovered, setHovered] = useState(0);
   const [liked, setLiked] = useState(false);
+
+  const isProductLiked = (productId :any) => likedProducts.includes(productId);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -134,13 +139,27 @@ const BestSeller = () => {
                     </div>
                     <div className="absolute top-5 left-[340px]">
                       <BsSuitHeart
-                        className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
-                        onClick={() => setLiked(!liked)}
-                        onMouseEnter={() => setHovered(data.id)}
-                        onMouseLeave={() => setHovered(0)}
+                       className={`h-10 w-10 ${isProductLiked(data.id) ? "text-red-500" : ""}`}
+                       onClick={() => toggleLike(data.id)}
+                       onMouseEnter={() => setHovered(data.id)}
+                       onMouseLeave={() => setHovered(0)}
+                        // className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
+                        // onClick={() => setLiked(!liked)}
+                        // onMouseEnter={() => setHovered(data.id)}
+                        // onMouseLeave={() => setHovered(0)}
                       />
                       <div className="absolute top-0 left-[px]">
-                        {liked && (
+                      {isProductLiked(data.id) && (
+                          <BsSuitHeartFill
+                            className={`h-10 w-10 text-red-500 ${
+                              hovered === data.id ? "text-red-500" : ""
+                            }`}
+                            onClick={() => toggleLike(data.id)}
+                            onMouseEnter={() => setHovered(data.id)}
+                            onMouseLeave={() => setHovered(0)}
+                          />
+                        )}
+                        {/* {liked && (
                           <BsSuitHeartFill
                             className={`h-10 w-10 text-red-500 ${
                               hovered === data.id ? "text-red-500" : ""
@@ -149,7 +168,7 @@ const BestSeller = () => {
                             onMouseEnter={() => setHovered(data.id)}
                             onMouseLeave={() => setHovered(0)}
                           />
-                        )}
+                        )} */}
                       </div>
                     </div>
                   </div>
