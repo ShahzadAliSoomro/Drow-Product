@@ -143,10 +143,6 @@ const BestSeller = () => {
                        onClick={() => toggleLike(data.id)}
                        onMouseEnter={() => setHovered(data.id)}
                        onMouseLeave={() => setHovered(0)}
-                        // className={`h-10 w-10 ${liked ? "" : "text-red-500"}`}
-                        // onClick={() => setLiked(!liked)}
-                        // onMouseEnter={() => setHovered(data.id)}
-                        // onMouseLeave={() => setHovered(0)}
                       />
                       <div className="absolute top-0 left-[px]">
                       {isProductLiked(data.id) && (
