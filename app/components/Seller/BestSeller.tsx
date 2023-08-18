@@ -155,16 +155,6 @@ const BestSeller = () => {
                             onMouseLeave={() => setHovered(0)}
                           />
                         )}
-                        {/* {liked && (
-                          <BsSuitHeartFill
-                            className={`h-10 w-10 text-red-500 ${
-                              hovered === data.id ? "text-red-500" : ""
-                            }`}
-                            onClick={() => setLiked(!liked)}
-                            onMouseEnter={() => setHovered(data.id)}
-                            onMouseLeave={() => setHovered(0)}
-                          />
-                        )} */}
                       </div>
                     </div>
                   </div>
