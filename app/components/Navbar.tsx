@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BiUser } from "react-icons/bi";
-import { BsCart2, BsSuitHeart } from "react-icons/bs";
+import { BsCart2, BsSuitHeart, BsSuitHeartFill } from "react-icons/bs";
 import { useLikedProducts } from "../context/LikedProductsContext";
 import Image from "next/image";
 
@@ -17,7 +17,7 @@ const textColors = [
   "text-yellow-600",
   "text-purple-600",
 ];
-export default function Navbar({ activeRoute }: NavbarProps)  {
+export default function Navbar({ activeRoute }: NavbarProps) {
   const { likedProducts } = useLikedProducts();
   const [open, setOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(""); // Track the active link
@@ -36,7 +36,7 @@ export default function Navbar({ activeRoute }: NavbarProps)  {
       clearInterval(interval);
     };
   }, []);
-  
+
   const handleLinkClick = (route: string) => {
     setActiveLink(route); // Update the active link when a link is clicked
     setOpen(false);
@@ -161,20 +161,90 @@ export default function Navbar({ activeRoute }: NavbarProps)  {
                   </span>
                 </div>
               </Link>
-              <div className="absolute hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80 h-80">
+              <div className="absolute hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded border shadow group-hover:block w-80 h-[450px]">
+                <div className="flex flex-col gap-5">
+                  <div className="flex justify-center items-center flex-col gap-3 pt-3">
+                    <div className="relative">
+                      <BsSuitHeartFill className="w-6 h-6 text-red-500" />
+                      <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gray-300 text-white rounded-full w-5 h-5 flex justify-center items-center">
+                        {likedProducts.length}
+                      </span>
+                    </div>
+                    <h4>MY WISHLIST</h4>
+                  </div>
+                  {/* Display liked products */}
+                  {likedProducts.length > 0 ? (
+                    <div className="flex flex-col gap-2 justify-center items-center">
+                      {likedProducts.map((productId) => (
+                        <div key={productId} className="text-base font-semibold">
+                          <div className="flex gap-3">
+                      <div>
+                        <Image
+                          src="/images/8.png"
+                          alt="8"
+                          width={100}
+                          height={100}
+                          className="w-16 h-16 "
+                        />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <p className="text-xs font-semibold">
+                          Euphoria Crop Blouse
+                        </p>
+                        <p className="text-sm font-bold">Rp. 125.000</p>
+                        <div className="flex gap-2">
+                          <p>ID No: </p>
+                          {productId}
+                        </div>
+                      </div>
+                    </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="text-center pt-5">
+                      No Product in the wishlist.
+                    </p>
+                  )}
+                </div>
+              </div>
+              {/* <div className="absolute hidden top-full right-0 bg-[#fff] text-[#404040] p-4 rounded  border shadow group-hover:block w-80 h-80">
                 <div className="flex flex-col gap-5">
                   <div className="flex justify-center items-center flex-col gap-3 pt-3">
                     <div className="relative">
                     <BsSuitHeart className="w-6 h-6" />
                     <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-gray-300 text-white rounded-full w-5 h-5 flex justify-center items-center">
-                    0
+                    {likedProducts.length}
                   </span>
                     </div>
                     <h4>MY WISHLIST</h4>
                   </div>
+                  <div className="flex pt-2 gap-3">
+                      <div>
+                        <Image
+                          src="/images/8.png"
+                          alt="8"
+                          width={100}
+                          height={100}
+                          className="w-24 h-24"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <p className="text-base font-semibold">
+                          Euphoria Crop Blouse
+                        </p>
+                        <p className="text-base font-bold">Rp. 125.000</p>
+                        <div className="flex gap-2">
+                          <p>Qty: </p>
+                          <button className="text-lg border w-10 text-center">
+                            1
+                          </button>
+                        </div>
+                      </div>
+                    </div>
                 </div>
                 <p className="text-center pt-5">No Product in the wishlist.</p>
-              </div>
+              </div> */}
             </div>
             <div className="relative group transition-all duration-500">
               <Link href="/checkout">
@@ -276,7 +346,6 @@ export default function Navbar({ activeRoute }: NavbarProps)  {
                   </div>
                   {/* <svg className="animate-bounce w-6 h-6 text-black">hello</svg> */}
                   <div className="flex justify-center hover:w-full">
-                    
                     <Link href="/checkout" className="flex">
                       <p className="text-blue-500 hover:underline hover:bg-[#F7F6F0] py-2 hover:text-[#404040] hover:cursor-pointer hover:shadow hover:w-40 hover:text-center">
                         View All Product
