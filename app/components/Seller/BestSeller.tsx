@@ -128,7 +128,7 @@ const BestSeller = () => {
                   <div
                     className={`absolute top-0 w-full ${
                       hovered === data.id ? "visible" : "invisible"
-                    } text-white`}
+                    } text-white `}
                   >
                     <div className="absolute top-[440px] left-0 flex justify-center items-center bg-black p-2 w-[400px]">
                       <BsCart2
@@ -139,7 +139,7 @@ const BestSeller = () => {
                     </div>
                     <div className="absolute top-5 left-[340px]">
                       <BsSuitHeart
-                       className={`h-10 w-10 ${isProductLiked(data.id) ? "text-red-500" : ""}`}
+                       className={`h-10 w-10 ${isProductLiked(data.id) ? "text-red-500" : "text-red-500"}`}
                        onClick={() => toggleLike(data.id)}
                        onMouseEnter={() => setHovered(data.id)}
                        onMouseLeave={() => setHovered(0)}
