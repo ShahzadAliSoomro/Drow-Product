@@ -176,28 +176,31 @@ export default function Navbar({ activeRoute }: NavbarProps) {
                   {likedProducts.length > 0 ? (
                     <div className="flex flex-col gap-2 justify-center items-center">
                       {likedProducts.map((productId) => (
-                        <div key={productId} className="text-base font-semibold">
+                        <div
+                          key={productId}
+                          className="text-base font-semibold"
+                        >
                           <div className="flex gap-3">
-                      <div>
-                        <Image
-                          src="/images/8.png"
-                          alt="8"
-                          width={100}
-                          height={100}
-                          className="w-16 h-16 "
-                        />
-                      </div>
-                      <div className="flex flex-col gap-1">
-                        <p className="text-xs font-semibold">
-                          Euphoria Crop Blouse
-                        </p>
-                        <p className="text-sm font-bold">Rp. 125.000</p>
-                        <div className="flex gap-2">
-                          <p>ID No: </p>
-                          {productId}
-                        </div>
-                      </div>
-                    </div>
+                            <div>
+                              <Image
+                                src="/images/8.png"
+                                alt="8"
+                                width={100}
+                                height={100}
+                                className="w-16 h-16 "
+                              />
+                            </div>
+                            <div className="flex flex-col gap-1">
+                              <p className="text-xs font-semibold">
+                                Euphoria Crop Blouse
+                              </p>
+                              <p className="text-sm font-bold">Rp. 125.000</p>
+                              <div className="flex gap-2">
+                                <p>ID No: </p>
+                                {productId}
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       ))}
                     </div>
