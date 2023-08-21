@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer'
 import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
 import { LikedProductsProvider } from './context/LikedProductsContext';
+import { ClerkProvider } from '@clerk/nextjs'
 
 const Progress = dynamic(() => import('./components/progress/Progress'), {
   loading: () => <p>Loading...</p>,
@@ -24,6 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
+    <ClerkProvider>
     <html className={inter.className}>
     <Head>
         <title>Create Next App</title>
@@ -39,6 +41,7 @@ export default function RootLayout({
         </LikedProductsProvider>
         </body>
     </html>
+    </ClerkProvider>
   )
 }
 
