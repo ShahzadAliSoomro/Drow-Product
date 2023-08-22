@@ -49,3 +49,36 @@
   transition: width 0.2s, height 0.2s;
   transition-timing-function: ease-in-out;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Mobile devices */
+@media screen and (max-width: 640px) {
+  /* Add responsive styles for mobile devices */
+  /* For example: */
+  .container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  /* Continue adding more responsive styles as needed */
+}
+
+/* Tablets */
+/* @media screen and (min-width: 641px) and (max-width: 1024px) {
+  
+  .container {
+    max-width: 80%;
+    padding: 2rem;
+  }
+  
+} */
+
+/* Desktops */
+/* @media screen and (min-width: 1025px) {
+  
+  .container {
+    max-width: 1200px;
+    padding: 3rem;
+  }
+  
+} */
