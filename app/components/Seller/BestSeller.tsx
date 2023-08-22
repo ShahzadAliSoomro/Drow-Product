@@ -96,11 +96,11 @@ const BestSeller = () => {
       <div className="text-center lg:text-5xl text-3xl font-bold text-[#404040]">
         <h2 className="">Our Best Seller</h2>
       </div>
-      <div className="lg:w-[1240px] mx-auto ">
+      <div className="lg:w-[1240px] mx-auto">
         <Slider {...settings}>
           {CardData.map((data) => (
             <div key={data.id} className="">
-              <div className="flex justify-center items-center relative">
+              <div className="flex justify-center items-center relative ">
                 <div className="relative hover:-translate-y-3 transition-all duration-500">
                   <div
                     className={`relative w-[400px] h-[500px] hover:-translate-y-3 transition-all duration-500`}
