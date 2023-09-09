@@ -58,7 +58,7 @@ const BestSeller = () => {
   const [hovered, setHovered] = useState(0);
   const [liked, setLiked] = useState(false);
 
-  const isProductLiked = (productId :any) => likedProducts.includes(productId);
+  const isProductLiked = (productId: any) => likedProducts.includes(productId);
 
   const settings = {
     dots: true,
@@ -139,13 +139,17 @@ const BestSeller = () => {
                     </div>
                     <div className="absolute top-5 left-[340px]">
                       <BsSuitHeart
-                       className={`h-10 w-10 ${isProductLiked(data.id) ? "text-red-500" : "text-red-500"}`}
-                       onClick={() => toggleLike(data.id)}
-                       onMouseEnter={() => setHovered(data.id)}
-                       onMouseLeave={() => setHovered(0)}
+                        className={`h-10 w-10 ${
+                          isProductLiked(data.id)
+                            ? "text-red-500"
+                            : "text-red-500"
+                        }`}
+                        onClick={() => toggleLike(data.id)}
+                        onMouseEnter={() => setHovered(data.id)}
+                        onMouseLeave={() => setHovered(0)}
                       />
                       <div className="absolute top-0 left-[px]">
-                      {isProductLiked(data.id) && (
+                        {isProductLiked(data.id) && (
                           <BsSuitHeartFill
                             className={`h-10 w-10 text-red-500 ${
                               hovered === data.id ? "text-red-500" : ""
