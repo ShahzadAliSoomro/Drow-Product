@@ -85,10 +85,12 @@ export default function TopProduct() {
                 <p>{item.price}</p>
               </div>
               <div className="m-3 absolute z-10">
-              <p className={`text-white font-semibold p-2 rounded-full ${currentColor} shimmer`}>
-                New
-              </p>
-            </div>
+                <p
+                  className={`text-white font-semibold p-2 rounded-full ${currentColor} shimmer`}
+                >
+                  New
+                </p>
+              </div>
               {/* <div
                 className={`absolute top-52 left-24 flex justify-between gap-32 ${
                   hovered === item.id ? "visible" : "invisible"
